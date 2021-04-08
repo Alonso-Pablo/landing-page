@@ -1,0 +1,95 @@
+html {
+    font-family: 'Roboto', 'arial'
+}
+
+.noDisplayed {
+    display: none;
+}
+
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: var(--black);
+}
+    /* tablet and desktop no display */
+    nav .nav__container-main-tablet {
+        display: none;
+    }
+    nav .nav__container-main-desktop {
+        display: none;
+    }
+    /*              end               */
+
+
+    nav .nav__container-main-cellphone {
+        display: flex;
+        height: 20px;
+        width: 90vw;
+        margin: 10px auto;
+        justify-content: space-between;
+    }
+
+        nav .nav__logo-small a img {
+            display: inline-block;
+            height: 20px;
+        }
+
+        nav .nav__menu-icon img {
+            display: inline-block;
+            height: 20px;
+        }
+
+/*         Menu displayed (by touching menu-icon)                 */
+    main .main__menu-displayed {
+        display: flex;
+        height: 80vh;
+        width: 80vw;
+        position:absolute;
+        right: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: var(--black);
+        color: white;
+        border-radius: 0 0 10px 10px;
+    }
+        /* Contain p, input and icon-search */
+        .main__menu-displayed .search {
+            margin-left: calc(50% - 95px);
+        }
+            .search p {
+                margin-bottom: 5px;
+            }
+
+        .container-input-icon {
+            display: flex;
+            height: 20px;
+            background: white;
+            border-radius: 5px 5px 5px 5px;
+        }
+            .container-input-icon input{
+                padding-left: 2px;
+                border-radius: 5px 5px 5px 5px;
+            }
+            .container-input-icon .search-icon img{
+                width: 20px;
+                height: 15px;
+                padding-top: 2.5px;
+            }
+
+        .main__menu-displayed p {
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .close-menu-icon {
+            min-height: 40px;
+            margin: 0 auto;
+        }
+            .close-menu-icon img{
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                fill: white;
+            }
