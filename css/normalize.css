@@ -30,3 +30,11 @@ input {
 input:focus{
     outline: none
 }
+
+
+a {
+    color: inherit;
+}
+a:link {
+    text-decoration: none;
+ }
