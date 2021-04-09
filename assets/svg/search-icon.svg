@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 508.8" style="enable-background:new 0 0 512 508.8;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#222222;stroke-width:25;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#222222;stroke-width:50;stroke-linecap:round;stroke-miterlimit:10;}
-	.st2{fill:#222222;}
-	.st3{fill:#FFFFFF;}
+	.st2{fill:#FFFFFF;stroke:#222222;stroke-width:40;stroke-miterlimit:10;}
 </style>
 <g id="Capa_2_1_">
 	<line class="st0" x1="247" y1="251.2" x2="383.2" y2="382.8"/>
 	<line class="st1" x1="372" y1="372" x2="485.7" y2="482.7"/>
 </g>
-<g id="Capa_3">
-	<circle class="st2" cx="186" cy="186" r="186"/>
-	<circle class="st3" cx="186" cy="186" r="150"/>
-</g>
+<circle class="st2" cx="186.3" cy="186" r="164"/>
 </svg>

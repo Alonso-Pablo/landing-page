@@ -20,28 +20,53 @@
         <link rel="stylesheet" href="css/colors.css">
 
         <!-- Media Queries -->
-        <link rel="stylesheet" href="./css/cellphone.css" media="(min-width: 320px)" />
+        <link rel="stylesheet" href="./css/index/cellphone.css" media="(min-width: 320px)" />
 
-        <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 768px)" />
+        <link rel="stylesheet" href="./css/index/tablet.css" media="(min-width: 768px)" />
 
-        <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 1152px)" />
+        <link rel="stylesheet" href="./css/index/desktop.css" media="(min-width: 1152px)" />
 
 </head>
 
 <body>
+
     <header>
         <nav>
-            <!-- for Cellphone-->
+            <!-- Nav for Cellphone -->
             <div class="nav__container-main-cellphone">
-
+                <!-- Logo -->
                 <div class="nav__logo-small">
                     <a href="index.html">
                          <img src="./assets/svg/logo-small.svg" alt="logo small" srcset=""> 
                     </a>
                 </div>
+                <!-- Search Input -->
+                <div class="search displayHidden" id="search">
+                    <div class="search__container ">
 
+                        <input class="search-input" type="text" placeholder="Buscar producto o nutriente">
+
+                    </div>
+                </div>
+                <!-- Search Icon -->
+                <div class="search-icon" id="search-icon">
+                    <img src="./assets/svg/search-icon-white.svg" alt="search icon">
+                </div>
+                <!-- Menu Icon -->
                 <div class="nav__menu-icon" id="menu-icon">
                     <img src="./assets/svg/menu-icon.svg" alt="icon to display menu">
+                </div>
+            </div>
+
+            <!-- Menu Dropdown menu for Cellphone -->
+            <div class="nav__menu-displayed displayNone" id="main-menu">
+
+                <a href="./products.html"><p>PRODUCTOS</p></a>
+                <a href="./contactus.html"><p>CONTACTANOS</p></a>
+                <a href="./aboutus.html"><p>SOBRE NOSOTROS</p></a>
+
+                <div class="close-menu-icon" id="close-menu-icon">
+                    <img src="./assets/svg/arrow-up.svg" alt="arrow up to close menu">
                 </div>
 
             </div>
@@ -50,7 +75,7 @@
             <div class="nav__container-main-tablet">
 
                 <div class="nav__logo-large">
-                    <a href="index.html"> <img src="./assets/img/logo-large.png" alt="logo large" > </a>
+                    <a href="index.html"> <img src="" alt="logo large" > </a>
                 </div>
 
             </div>
@@ -60,26 +85,8 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <div class="main__menu-displayed displayNone" id="main-menu">
-
-            <div class="search">
-                <p>Buscar por producto</p>
-                <div class="container-input-icon">
-                    <input class="search-input" type="text">
-                    <div class="search-icon">
-                        <img src="./assets/svg/search-icon.svg" alt="search icon">
-                    </div>
-                </div>
-            </div>
-                <a href="./products.html"><p> Productos </p></a>
-                <a href="./contactme.html"><p> Contactanos </p></a>
-                <a href="./aboutme.html"><p> Sobre mí </p></a>
-            <div class="close-menu-icon" id="close-menu-icon">
-                <img src="./assets/svg/arrow-up.svg" alt="arrow up to close menu">
-            </div>
-
-        </div>
 
         <section class="main__head-info">
             <div class="first">
@@ -90,8 +97,9 @@
             </div>
         </section>
 
+        <!-- Products -->
         <section class="body__products">
-            <!-- Title of section Products -->
+
             <div class="body__products-title">
                 <div class="products__title-container">
                     <h2>PRINCIPALES PRODUCTOS NUTRICIONALES</h2>
@@ -101,7 +109,7 @@
                 </div>
             </div>
 
-            <!-- Product shelf -->
+            <!-- Product Shelf -->
             <div class="body__products-stand">
 
                 <div class="product__background-gray">
@@ -133,7 +141,9 @@
 
         </section>
 
+        <!-- Certificates -->
         <section class="body__international-certificates">
+
             <div class="body__certificates-title">
                 <div class="certificates__title-container">
                     <p>CERTIFICADOS INTERNACIONALES A OMNILIFE</p><span class="logo-std"></span>
@@ -172,21 +182,61 @@
             </div>
 
         </section>
-            <div>
 
+        <section class="body__join-us">
+
+            <div class="body__join-us-title">
+                <div class="join-us__title-container">
+                    <p>¡Bienvenido/a a mi sitio web<br> de Empresario Independiente OMNILIFE!</p>
+                    <p>DECÍDETE Y CONVIÉRTETE EN</p>
+                    <p>EMPRESARIO OMNILIFE</p>
+                </div>
             </div>
-            <div>
+
+            <div class="join-us__details">
                 <p>Estoy aquí para ayudarte a formar parte de esta gran familia.
                     <br><br>
                     Te ofrezco el mejor asesoramiento sobre los productos OMNILIFE y la mejor guía para impulsar tu negocio, además de otros beneficios al formar parte de esta gran empresa.
                     <br><br>
                     Somos Gente que cuida a la gente, a toda la gente.
-                    Compartiendo contigo lo que le ha funcionado a más de siete millones de personas en todo el mundo, con la confianza y el respaldo de una empresa con más de 30 años de experiencia.</p>
+                    Compartiendo contigo lo que le ha funcionado a más de siete millones de personas en todo el mundo, con la confianza y el respaldo de una empresa con más de 30 años de experiencia.
+                </p>
+
+                <img src="./assets/img/perfil-400x360.jpg" alt="entrepreneurs Zulema Tevez and Pablo Alonso">
+                <div class="join-us__names"><p>Zulema Tevez <br>Alonso Pablo</p></div>
             </div>
-            <div><img src="./assets/img/perfil-400x360.jpg" alt="entrepreneurs Zulema Tevez and Pablo Alonso"></div>
-            
-        <section></section>
-        <section></section>
+
+        </section>
+
+        <section class="body__decisions">
+            <p><b>¿TIENES UN SUEÑO?</b><br>
+                Queremos ser el puente
+                para que lo alcances
+            </p>
+
+            <div class="decisions__details">
+            <span class="heart-icon"></span>
+            <p>Una oportunidad de<br>
+                <b>mejorar tu calidad de vida</b></p>
+
+            <span class="hand-coin-icon"></span>
+            <p>Obtener<br>
+                <b>nuevos ingresos</b></p>
+
+            <span class="apple-icon"></span>
+            <p>Ayudar a gente a<br>
+                <b>mejorar su salud</b></p>
+
+            <span class="airplane-icon"></span>
+            <p>Tu negocio te lleva<br>
+                <b>a cumplir tus sueños</b></p>
+            </div>
+
+            <div>
+                <button>Quiero unirme</button> <button>Comprar como Cliente Admirable</button>
+            </div>
+
+        </section>
     </main>
     <footer>
 
