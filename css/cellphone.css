@@ -143,7 +143,7 @@ main .main__head-info {
     background-color: var(--orange);
     color: var(--black);
 }
-    body .title-container {
+    body .products__title-container {
         display: flex;
         margin-left: auto;
         margin-right: auto;
@@ -302,3 +302,62 @@ body .see-more {
         font-size: 1rem;
         font-weight: 700;
     }
+
+body .body__certificates-title {
+    display: flex;
+    width: 100%;
+    min-height: 120px;
+    background-color: var(--black);
+}
+    .certificates__title-container {
+        display: flex;
+        width: 260px;
+        height: 76px;
+        margin: auto;
+        color: var(--white);
+    }
+        .certificates__title-container p {
+            width: 180px;
+            height: 76px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: right;
+        }
+        body .logo-std {
+            display: inline-block;
+            width: 76px;
+            background-image: url("../assets/svg/global-std-logo.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    
+    body .certificates__details-container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 50px 20px;
+
+    }
+    .certificates__details-container img {
+        width: 130px;
+        height: 130px;
+        align-self: center;
+    }
+    .certificates__details-container p {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+        .certificate_details {
+            display: flex;
+            width: 130px;
+            justify-content: space-between;
+            flex-direction: column;
+        }
