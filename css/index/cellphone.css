@@ -515,4 +515,22 @@ body .body__join-us-title {
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+      width: 260px;
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+    body .decisions__details {
+        display: flex;
+        width: 260px;
+    }
+        .heart-icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-image: url("../../assets/svg/heart-icon.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
