@@ -266,12 +266,12 @@ body .body__products-stand {
 
     body .product__background-gray {
         display: flex;
-        flex-direction:column;
-        text-align: center;
-        flex-grow: 3;
-        align-items: center;
         width: 120px;
         height: 200px;
+        flex-grow: 3;
+        flex-direction:column;
+        text-align: center;
+        align-items: center;
         margin-top: 15px;
         border-radius: 10px;
         background-color: var(--graylight);
@@ -503,34 +503,150 @@ body .body__join-us-title {
             font-weight: 400;
         }
 
-    body .decisions__details {
+    body .decisions__container {
         display: flex;
-        width: 260px;
+        width: 90%;
+        max-width: 350px;
+        margin: 30px auto;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px 15px;
     }
-        .heart-icon {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-image: url("../../assets/svg/heart-icon.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-      width: 260px;
-            margin-top: 30px;
-            font-size: 2rem;
-            font-weight: 400;
+        .decisions__details {
+            display: flex;
+            width: 120px;
+            flex-grow: 3;
+            flex-direction:column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
         }
+            .decisions__details p {
+                display: flex;
+                font-size: 1.5rem;
+                flex-flow: column;
+            }
 
-    body .decisions__details {
+            .heart-icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-image: url("../../assets/svg/heart-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .hand-coin-icon {
+                display: inline-block;
+                width: 50px;
+                height: 52px;
+                background-image: url("../../assets/svg/hand-coin-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .apple-icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-image: url("../../assets/svg/apple-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .airplane-icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-image: url("../../assets/svg/airplane-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+    body .decisions__button-container {
         display: flex;
         width: 260px;
+        margin: 30px auto;
+        justify-content: space-between;
     }
-        .heart-icon {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-image: url("../../assets/svg/heart-icon.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+    body .decisions__button-join {
+        display: flex;
+        width: 120px;
+        height: 40px;
+        background-color: var(--white);
+        border-radius: 100px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+    }
+    body .decisions__button-buy {
+        display: flex;
+        width: 120px;
+        height: 40px;
+        background-color: var(--white);
+        border-radius: 100px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .footer__background {
+        display: flex;
+        width: 100%;
+        height: 120px;
+        background-color: var(--black);
+        justify-content: center;
+        align-items: center;
+    }
+        .footer__container {
+            display: flex;
+            width: 260px;
+            height: 76px;
+            justify-content: space-between;
         }
+            .footer__text {
+                display: flex;
+                width: 120px;
+                font-size: 2rem;
+                font-weight: 700;
+                flex-direction: column;
+            }
+                .footer__text p:nth-child(1) {
+                    color: var(--white);
+                }
+                .footer__text p:nth-child(2) {
+                    color: var(--orange);
+                }
+                .footer__text p:nth-child(3) {
+                    font-size: 1.2rem;
+                    color: var(--graylight);
+                    font-weight: 400;
+                }
+            .foooter__media-icons {
+                display: flex;
+                width: 110px;
+                justify-content: space-between;
+                align-items: center;
+            }
+                .facebook-icon {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("../../assets/svg/facebook-icon.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    filter: invert(100%);
+                }
+                .whatsapp-icon {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-image: url("../../assets/svg/whatsapp-icon.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    filter: invert(100%);
+                }
