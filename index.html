@@ -12,7 +12,7 @@
     
     <!-- Fonts of Google -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     
     <!-- CSS-->
         <!-- Normalize Default and Colors Root -->
@@ -32,14 +32,16 @@
 
     <header>
         <nav>
-            <!-- Nav for Cellphone -->
+        <!-- Nav for Cellphone -->
             <div class="nav__container-main-cellphone">
+
                 <!-- Logo -->
                 <div class="nav__logo-small">
                     <a href="index.html">
                          <img src="./assets/svg/logo-small.svg" alt="logo small" srcset=""> 
                     </a>
                 </div>
+
                 <!-- Search Input -->
                 <div class="search displayHidden" id="search">
                     <div class="search__container ">
@@ -48,17 +50,47 @@
 
                     </div>
                 </div>
-                <!-- Search Icon -->
-                <div class="search-icon" id="search-icon">
-                    <img src="./assets/svg/search-icon-white.svg" alt="search icon">
-                </div>
-                <!-- Menu Icon -->
-                <div class="nav__menu-icon" id="menu-icon">
-                    <img src="./assets/svg/menu-icon.svg" alt="icon to display menu">
+
+                <div class="nav__container-search-and-menu">
+                    <!-- Search Icon -->
+                    <div class="search-icon" id="search-icon">
+                        <img src="./assets/svg/search-icon-white.svg" alt="search icon">
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Menu Dropdown menu for Cellphone -->
+
+        <!-- Nav for Tablet -->
+            <div class="nav__container-main-tablet">
+
+                <!-- Logo -->
+                <div class="nav__logo-large">
+                    <a href="index.html">
+                        <img src="./assets/svg/logo-large.svg" alt="logo large" > </a>
+                </div>
+
+                <!-- Search Input -->
+                <div class="search" id="search">
+                    <div class="search__container">
+
+                        <input class="search-input" type="text" placeholder="Buscar producto o nutriente">
+
+                        <div class="search-icon" id="search-icon">
+                            <img src="./assets/svg/search-icon-white.svg" alt="search icon">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Menu Icon -->
+            <div class="nav__menu-icon" id="menu-icon">
+                <img src="./assets/svg/menu-icon.svg" alt="icon to display menu">
+            </div>
+
+            <!-- Menu Dropdown menu for Cellphone and Tablet -->
             <div class="nav__menu-displayed displayNone" id="main-menu">
 
                 <a href="./products.html"><p>PRODUCTOS</p></a>
@@ -71,27 +103,27 @@
 
             </div>
 
-            <!-- for Tablet -->
-            <div class="nav__container-main-tablet">
-
-                <div class="nav__logo-large">
-                    <a href="index.html"> <img src="" alt="logo large" > </a>
-                </div>
-
-            </div>
-            <!-- for Desktop -->
+        <!-- for Desktop -->
             <div class="nav__container-main-desktop">
 
             </div>
+
         </nav>
     </header>
 
+
+    <!-- MAIN -->
     <main>
 
+        <div class="main__disclaimer displayFlex" id="main__disclaimer">
+            <p>Somos Distribuidores Independientes a Omnilife. Consulte para confirmar el stock de los productos necesitados. </p> <span class="x-icon"></span>
+        </div>
+
+        <!-- Head Info-->
         <section class="main__head-info">
             <div class="first">
                 <span class="first__background-world"></span>
-                <h1>OMNI</h1>
+                <h1>OMNILIFE</h1>
                 <h2>LOS PRODUCTOS OMNILIFE ESTÁN DISPONIBLE EN MÁS DE 20 PAISES</h2>
                 <p>Somos distribuidores independientes de Omnilife</p>
             </div>
@@ -102,7 +134,7 @@
 
             <div class="body__products-title">
                 <div class="products__title-container">
-                    <h2>PRINCIPALES PRODUCTOS NUTRICIONALES</h2>
+                    <h2>PRINCIPALES<br>PRODUCTOS<br>NUTRICIONALES</h2>
                     <span class="bottle-large-icon"></span>
                     <span class="bottle-small-icon"></span>
                     <span class="box-small-icon"></span>
@@ -183,11 +215,11 @@
 
         </section>
 
+        <!-- Join Us-->
         <section class="body__join-us">
 
             <div class="body__join-us-title">
                 <div class="join-us__title-container">
-                    <p>¡Bienvenido/a a mi sitio web<br> de Empresario Independiente OMNILIFE!</p>
                     <p>DECÍDETE Y CONVIÉRTETE EN</p>
                     <p>EMPRESARIO OMNILIFE</p>
                 </div>
@@ -202,17 +234,27 @@
                     Compartiendo contigo lo que le ha funcionado a más de siete millones de personas en todo el mundo, con la confianza y el respaldo de una empresa con más de 30 años de experiencia.
                 </p>
 
-                <img src="./assets/img/perfil-400x360.jpg" alt="entrepreneurs Zulema Tevez and Pablo Alonso">
-                <div class="join-us__names"><p>Zulema Tevez <br>Alonso Pablo</p></div>
+                <div class="join-us__image">
+                    <img src="./assets/img/perfil-400x360.jpg" alt="entrepreneurs Zulema Tevez and Pablo Alonso">
+                    <div class="join-us__names"><p>Zulema Tevez <br>Alonso Pablo</p></div>
+                </div>
+
             </div>
 
         </section>
 
+        <!-- Decisions -->
         <section class="body__decisions">
-            <h2><b>¿TIENES UN SUEÑO?</b>
-                Queremos ser el puente<br>
-                para que lo alcances
-            </h2>
+            <div class="decisions__title">
+                <h2>
+                    ¿TIENES UN SUEÑO?
+                </h2>
+                <p>
+                    Queremos ser el puente<br>
+                    para que lo alcances
+                </p>
+
+            </div>
 
             <div class="decisions__container">
 
@@ -247,14 +289,14 @@
             </div>
 
             <div class="decisions__button-container">
-                <div class="decisions__button-join">
-                    <a href="https://wa.link/attwne">
-                        Quiero unirme
+                <div >
+                    <a class="decisions__button-join" href="https://wa.link/attwne">
+                        <p>Quiero unirme</p>
                     </a>
                 </div>
-                <div class="decisions__button-buy">
-                    <a href="https://portal.omnilife.com/registro-cliente?distributor_code=54100361TBZ&country_code=ARG&lang=es">
-                        Comprar como<br>Cliente Admirable
+                <div >
+                    <a class="decisions__button-buy" href="https://portal.omnilife.com/registro-cliente?distributor_code=54100361TBZ&country_code=ARG&lang=es">
+                        <p>Comprar como<br>Cliente Admirable</p>
                     </a>
                 </div>
             </div>
@@ -265,14 +307,17 @@
         <div class="footer__background">
             <div class="footer__container">
                 <div class="footer__text">
+                    <a href="#">
                     <p>NUTRICIÓN</p>
                     <p>ABUNDANTE</p>
+                    
                     <p>Distribuidores Independientes</p>
+                </a>
                 </div>
 
                 <div class="foooter__media-icons">
-                    <span class="facebook-icon"></span>
-                    <span class="whatsapp-icon"></span>
+                   <a href="https://www.facebook.com/zulema.tevez"><span class="facebook-icon"></span></a>
+                    <a href="https://api.whatsapp.com/send?phone=5491133136799"><span class="whatsapp-icon"></span></a>
                 </div>
             </div>
         </div>
