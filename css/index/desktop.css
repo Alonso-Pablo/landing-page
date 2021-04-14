@@ -1,0 +1,348 @@
+/*        Cellphone and Tablet no display        */
+nav .nav__container-main-cellphone {
+    display: none;
+}
+nav .nav__container-main-tablet {
+    display: none;
+}
+nav .nav__menu-icon {
+    display: none;
+}
+.nav__menu-displayed {
+    display: none;
+}
+body .body__products-stand--MT {
+    display: none;
+}
+
+/* DESKTOP */
+nav {
+    min-height: 50px;
+}
+
+nav .nav__container-main-desktop {
+    display: flex;
+    width: 90vw;
+    min-height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+    nav .nav__list {
+        height: 50px;
+        display: flex;
+        color: var(--white);
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        gap: 50px;
+    }
+        nav .nav__list a {
+            display: flex;
+            height: 50px;
+            padding: 0 5px;
+            align-items: center;
+        }
+        nav .nav__list a:hover {
+
+            color: var(--orange);
+            background-color: var(--blacklight);
+            transition: all 0.2s;
+        }
+        nav .nav__list a:nth-child(3) {
+            min-width: 156px;
+        }
+
+    nav .search {
+        width: 600px;
+        margin: 0;
+    }
+
+    /* MAIN */
+
+    /* Products*/
+
+    body .body__products-stand--D {
+        display: flex;
+        width: 90%;
+        max-width: 1490px;
+        margin: 0 auto;
+        justify-content: space-between;
+        gap: 20px;
+    }
+        body .product__background-gray--D {
+            display: flex;
+            width: 120px;
+            max-width: 300px;
+            height: 200px;
+            flex-grow: 3;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: var(--graylight);
+            box-shadow: 5px 5px 25px -20px var(--black);
+        }
+            body .product__background-gray--D:hover .product__hover, .product__hover:hover {
+                display: flex;
+            }
+            .product__hover {
+                width: 100%;
+                max-width: 302px;
+                height: 200px;
+                flex-grow: 3;
+                flex-direction: column;
+                justify-content: space-evenly;
+                position: absolute;
+                cursor: pointer;
+                border: 2px solid var(--orange);
+                border-radius: 8px;
+                background-color: var(--whitetransparent);
+                -webkit-backdrop-filter: saturate(180%) blur(5px);
+                backdrop-filter: saturate(180%) blur(5px);
+            }
+                .product__hover a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 5px 25px;
+                }
+                    .product__hover .product__moreinfo:hover { 
+                        background-color: var(--orange);
+                    }
+                    .product__hover .product__sendwsp:hover {
+                        background-color: var(--orange);
+                    }
+
+                .plus-icon {
+                    min-width: 40px;
+                    height: 40px;
+                    background-image: url("../../assets/svg/plus-icon.svg");
+                }
+                .product__hover p {
+                    min-width: 100px;
+                    max-width: 200px;
+                    display: inline-block;
+                    font-size: 2rem;
+                }
+
+
+        body .img_product_config {
+            display: inline-block;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Omniplus */
+            .product__image-omniplus--box-s {
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                margin-top: 35px;
+                left: 5%;
+                background-image: url("../../assets/img/products/omniplus_caja_s.png");
+            }
+            .product__image-omniplus--bottle {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 15px;
+                left: 22%;
+                background-image: url("../../assets/img/products/omniplus_bote.png");
+            }
+            .product__image-omniplus--box {
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                margin-top: 38px;
+                left: 53%;
+                background-image: url("../../assets/img/products/omniplus_caja.png");
+            }
+
+        /* Biocros */
+            .product__image-biocros--box {
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                margin-top: 38px;
+                left: 8%;
+                background-image: url("../../assets/img/products/biocros_caja.png");
+            }
+            .product__image-biocros--box-s {
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                margin-top: 32px;
+                left: 38%;
+                background-image: url("../../assets/img/products/biocros_caja_s.png");
+            }
+            .product__image-biocros--bottle {
+                position: absolute;
+                width: 135px;
+                height: 135px;
+                margin-top: 15px;
+                left: 55%;
+                background-image: url("../../assets/img/products/biocros_bote.png");
+            }
+
+        /* Thermogenicos */
+            .product__image-thermogen-limon {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                margin-top: 52px;
+                left: 3%;
+                background-image: url("../../assets/img/products/thermogen_limon_caja_s.png");
+            }
+            .product__image-thermogen-coffee {
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                margin-top: 36px;
+                left: 32%;
+                background-image: url("../../assets/img/products/thermogen_coffee_caja.png");
+            }
+            .product__image-thermogen-maracuya {
+                position: absolute;
+                width: 105px;
+                height: 105px;
+                margin-top: 42px;
+                left: 62%;
+                background-image: url("../../assets/img/products/thermogen_maracuya_caja_s.png");
+            }
+
+            /* Fiber Supreme */
+            .product__image-fiber-supreme {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 16px;
+                left: 30%;
+                background-image: url("../../assets/img/products/fiber_caja_s.png");
+            }
+
+            /* Omniost Supreme */
+            .product__image-omniost-box {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 20px;
+                left: 30%;
+                background-image: url("../../assets/img/products/omniost_caja_s.png");
+            }
+            
+            /* Power Maker */
+            .product__image-power-maker-box-s {
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                margin-top: 35px;
+                left: 24%;
+                background-image: url("../../assets/img/products/power_maker_caja_s.png");
+            }
+            .product__image-power-maker-bottle {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 16px;
+                left: 40%;
+                background-image: url("../../assets/img/products/power_maker_bote.png");
+            }
+
+            /* Focus */
+            .product__image-focus-box-s {
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                margin-top: 34px;
+                left: 18%;
+                background-image: url("../../assets/img/products/focus_caja_s.png");
+            }
+            .product__image-focus-bottle {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 16px;
+                left: 38%;
+                background-image: url("../../assets/img/products/focus_bote.png");
+            }
+
+            /* Aloe Beta */
+            .product__image-aloe-beta-200 {
+                position: absolute;
+                width: 90px;
+                height: 90px;
+                margin-top: 50px;
+                left: 15%;
+                background-image: url("../../assets/img/products/aloe_beta_200.png");
+            }
+            .product__image-aloe-beta-l {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 14px;
+                left: 2 5%;
+                background-image: url("../../assets/img/products/aloe_beta_limon_bote_900.png");
+            }
+            .product__image-aloe-beta-a{
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                margin-top: 14px;
+                left: 40%;
+                background-image: url("../../assets/img/products/aloe_beta_anana_bote_900.png");
+            }
+
+        .body__products-stand--D-ghost {
+            display: flex;
+            width: 90%;
+            max-width: 1490px;
+            margin: 0 auto;
+            justify-content: space-between;
+            gap: 20px;
+        }
+            .product__background-gray-ghost {
+                display: flex;
+                width: 300px;
+                margin-top: 20px;
+                height: 100px;
+                justify-content: center;
+                background: linear-gradient(to top, #FFFFFF 00%, var(--graylight) 30%, var(--graylight) 100%);
+                border-radius: 10px 10px 0 0;
+                box-shadow: 5px 5px 15px -20px var(--black);
+                overflow: hidden;
+            }
+                .product__bottle-blank {
+                    display: inline-block;
+                    width: 60px;
+                    padding-top: 250px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url("../../assets/svg/bote.svg");
+                }
+                .product__box-blank {
+                    display: inline-block;
+                    width: 100px;
+                    padding-top: 120px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url("../../assets/svg/box-large.svg");
+                }
+        .see-more .arrow-right {
+            display: inline-block;
+            width: 20px;
+            max-width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("../../assets/svg/arrow-up.svg");
+            transform: rotate(90deg);
+            filter: invert(90%);
+        }

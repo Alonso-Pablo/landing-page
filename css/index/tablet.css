@@ -1,9 +1,3 @@
-/* TABLET */
-
-nav {
-    min-height: 60px;
-}
-
     /*        Cellphone and Desktop no display        */
     nav .nav__container-main-cellphone {
         display: none;
@@ -11,7 +5,17 @@ nav {
     nav .nav__container-main-desktop {
         display: none;
     }
+    body .body__products-stand--D {
+        display: none;
+    }
+    
 
+/* TABLET */
+
+nav {
+    min-height: 50px;
+}
+    /* NAV for Tablets */
     nav .nav__container-main-tablet {
         display: flex;
         width: 90vw;
@@ -20,6 +24,8 @@ nav {
         align-items: center;
         gap: 20px;
     }
+
+        /* Logo */
         .nav__logo-large {
             height: 40px;
         }
@@ -34,33 +40,38 @@ nav {
     }
         /* Search input ever display */
         nav .search {
-            height: 30px;
+            display: flex;
+            height: 35px;
             max-width: 800px;
+            margin-right: 60px;
+            justify-content: center;
+            align-items: center;
         }
             nav .search__container {
                 display: flex;
                 max-width: 600px;
-                height: 30px;
+                height: 35px;
+                border: none;
                 border-radius: 10px 10px 10px 10px;
                 background-color: var(--black);
             }
                 .search__container input{
                     width: 95%;
-                    height: 30px;
+                    height: 35px;
                     padding-left: 10px;
                     border-radius: 10px 0px 0px 10px;
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     font-weight: 400;
                 }
                     .search__container input::placeholder {
-                        font-size: 1.5rem;
+                        font-size: 1.8rem;
                     }
 
                 /* SEARCH ICON */
                 nav .search-icon {
                     display: flex;
-                    width: 30px;
-                    height: 30px;
+                    width: 35px;
+                    height: 35px;
                     padding: 0 5px;
                     justify-content: center;
                     align-items: center;
@@ -74,14 +85,20 @@ nav {
                     }
             
         /* MENU ICON */
-        nav .nav__menu-icon img {
-            padding-left: 20px;
+        nav .nav__menu-icon {
+            height: 30px;
+            width: 30px;
         }
-
         /*         Displayed Menu Options (touching .nav__menu-icon)                 */
         nav .nav__menu-displayed {
-            top: 60px;
+            top: 50px;
         }
+            .nav__menu-displayed a:hover {
+                background-color: var(--blacklight);
+            }
+            .close-menu-icon {
+                cursor: pointer;
+            }
 
 /* < MAIN /> */
 
@@ -137,30 +154,33 @@ body .body__products-title {
         margin-top: 30px;
     }
 
-body .body__products-stand {
+body .body__products-stand--MT {
     max-width: 800px;
     gap: 0 20px;
 }
-body .product__background-gray {
-    margin-top: 20px;
-}
-body .see-more {
-    width: 150px;
-    height: 40px;
-    margin-top: 20px;
-    border-radius: 100px;
-}
-    .see-more p {
-        padding-top: 0;
-        font-size: 2rem;
+    body .product__background-gray {
+        margin-top: 20px;
     }
+    body .see-more {
+        display: flex;
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .see-more p {
+            padding-top: 0;
+            font-size: 2rem;
+        }
 
 /* Certificates */
 body .body__certificates-title {
     min-height: 180px;
 }
     .certificates__title-container {
-        max-width: 413px;
+        width: 413px;
         height: 110px;
     }
         .certificates__title-container h2 {
@@ -169,7 +189,7 @@ body .body__certificates-title {
             font-size: 3rem;
         }
         body .logo-std {
-            width: 144px;
+            width: 140px;
         }
 
 body .certificates__details-container {
@@ -198,6 +218,7 @@ body .body__join-us-title {
             font-size: 4rem;
             font-weight: 9900;
         }
+
     body .join-us__details {
         width: 650px;
         font-size: 1.5rem;
@@ -277,7 +298,7 @@ body .decisions__button-container {
 
 /* Footer */
 footer .footer__background {
-    height: 180px;
+    height: 80px;
 }
 
     .footer__container {
@@ -285,7 +306,7 @@ footer .footer__background {
     }
         footer .footer__text {
             width: 200px;
-            font-size: 3rem;
+            font-size: 2rem;
         }
             .footer__text p:nth-child(3) {
                 font-size: 1.5rem;
@@ -296,13 +317,13 @@ footer .footer__background {
             width: 200px;
         }
             .facebook-icon {
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
             }
             .whatsapp-icon {
                 display: inline-block;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 background-image: url("../../assets/svg/whatsapp-icon.svg");
                 background-repeat: no-repeat;
                 background-position: center;

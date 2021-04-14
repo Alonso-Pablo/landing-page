@@ -27,9 +27,8 @@ searchIcon.addEventListener("click", () => {
 });
 
         /* Option menu - Display or Hide */
-menuIconDisplay.addEventListener("click", () => {
-    replaceClass (mainMenu, "displayFlex", "displayNone");
-});
+menuIconDisplay.addEventListener("click", () => replaceClass (mainMenu, "displayFlex", "displayNone") );
+
 closeMenu.addEventListener("click", () => {
     mainMenu.classList.remove("displayFlex");
     mainMenu.classList.add("displayNone");
@@ -43,7 +42,4 @@ const mainDisclaimer = document.getElementById("main__disclaimer");
 
     /* Functions */
         /* main > Disclaimer - Display or Hide */
-mainDisclaimer.addEventListener("click", () => {
-    replaceClass (mainDisclaimer, "displayFlex", "displayNone");
-})
-
+mainDisclaimer.addEventListener("click", () => replaceClass (mainDisclaimer, "displayFlex", "displayNone") );
