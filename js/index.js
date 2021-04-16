@@ -7,7 +7,7 @@ function replaceClass (objetiveElement, classAdd, classRemove) {
         objetiveElement.classList.remove(classAdd);
         objetiveElement.classList.add(classRemove);
     }
-}
+};
 
 /* NAV */
 const searchMenu = document.getElementById("search");
@@ -43,3 +43,5 @@ const mainDisclaimer = document.getElementById("main__disclaimer");
     /* Functions */
         /* main > Disclaimer - Display or Hide */
 mainDisclaimer.addEventListener("click", () => replaceClass (mainDisclaimer, "displayFlex", "displayNone") );
+
+
