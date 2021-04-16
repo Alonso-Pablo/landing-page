@@ -1,0 +1,69 @@
+html {
+    font-family: 'Roboto', 'arial';
+}
+
+/* < MAIN /> */ 
+main {
+    z-index: 800;
+}
+
+/* Main Disclaimer */
+.main__disclaimer {
+    min-height: 30px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: var(--orange);
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+    .main__disclaimer p {
+        width: 80%;
+    }
+
+    @media only screen and (min-width: 529px) {
+        .main__disclaimer { padding: 0;}
+    }
+
+    .main__disclaimer span {
+        display:inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/svg/x-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .main__filters {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        background-color: var(--orange);
+        align-items: center;
+        overflow-x: scroll;
+    }
+        .main__filters__container {
+            display: flex;
+            width: 100%;
+            height: 20px;
+        }
+            .main__filter {
+                display: flex;
+                height: 20px;
+                padding: 0 10px;
+                margin-left: 10px;
+                background-color: var(--white);
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-size: 1.5rem;
+                white-space: nowrap;
+            }
+            .main__filter p {
+
+            }

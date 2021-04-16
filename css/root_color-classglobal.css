@@ -1,0 +1,31 @@
+:root {
+    --font-principal: 'Roboto', 'arial';
+
+
+    --orange: #FE9925;
+    --trueblack: #000000;
+    --black: #222;
+    --blacklight: #3D3D3D;
+    --gray: gray;
+    --graylight: #F1F1F1;
+    --white: #FFFFFF;
+    --whitetransparent:hsla(0,0%,100%,0.8);
+    
+}
+
+
+.displayNone {
+    display: none;
+}
+.displayHidden {
+    visibility: hidden;
+}
+.displayFlex {
+    display: flex;
+}
+.img_product_config {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

@@ -1,0 +1,57 @@
+/*        Cellphone and Tablet no display        */
+nav .nav__container-main-cellphone {
+    display: none;
+}
+nav .nav__container-main-tablet {
+    display: none;
+}
+nav .nav__menu-icon {
+    display: none;
+}
+.nav__menu-displayed {
+    display: none;
+}
+
+
+/* Nav for DESKTOP */
+nav {
+    min-height: 50px;
+}
+
+nav .nav__container-main-desktop {
+    display: flex;
+    width: 90vw;
+    min-height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+    nav .nav__list {
+        height: 50px;
+        display: flex;
+        color: var(--white);
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        gap: 50px;
+    }
+        nav .nav__list a {
+            display: flex;
+            height: 50px;
+            padding: 0 5px;
+            align-items: center;
+        }
+        nav .nav__list a:hover {
+
+            color: var(--orange);
+            background-color: var(--blacklight);
+            transition: all 0.2s;
+        }
+        nav .nav__list a:nth-child(3) {
+            min-width: 156px;
+        }
+
+    nav .search {
+        width: 600px;
+        margin: 0;
+    }
