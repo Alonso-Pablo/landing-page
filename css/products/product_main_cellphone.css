@@ -38,32 +38,91 @@ main {
         cursor: pointer;
     }
 
+    /* Filters bar */
     .main__filters {
         display: flex;
         width: 100%;
         height: 40px;
         background-color: var(--orange);
+        justify-content: center;
         align-items: center;
         overflow-x: scroll;
     }
         .main__filters__container {
             display: flex;
-            width: 100%;
+            width: 90%;
             height: 20px;
         }
             .main__filter {
                 display: flex;
                 height: 20px;
                 padding: 0 10px;
-                margin-left: 10px;
+                margin-right: 10px;
                 background-color: var(--white);
                 border-radius: 10px;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
                 font-size: 1.5rem;
+                font-weight: 700;
                 white-space: nowrap;
             }
-            .main__filter p {
 
+    /* List of products */
+    .main_list_product {
+        display: flex;
+        width: 100%;
+        background-color: var(--graylight);
+    }
+        .list_product__container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container__product_individual {
+            display: flex;
+            width: 90%;
+            margin-top: 15px;
+            background-color: var(--white);
+            flex-direction: column;
+            box-shadow: 5px 5px 25px -20px var(--black);
+        }
+            .title_product {
+                display: flex;
+                width: 100%;
+                height: 30px;
+                border-radius: 5px 5px 0 0;
+                background-color: var(--black);
+                color: var(--white);
+                font-size: 1.2rem;
+                font-weight: 700;
+                justify-content: center;
+                align-items: center;
             }
+            .content_product {
+                display: flex;
+                font-size: 1rem;
+                
+            }
+                .product--img {
+                    width: 40%;
+                }
+                .product_details {
+                    display: flex;
+                    width: 60%;
+                    flex-direction: column;
+                    margin: 10px
+                }
+                .product_interesed-btn {
+                    display: flex;
+                    width: 150px;
+                    height: 20px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    background-color: var(--orange);
+                    justify-content: center;
+                    align-items: center;
+                }
