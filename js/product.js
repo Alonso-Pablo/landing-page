@@ -1,10 +1,39 @@
+// function replaceDisplay (objetiveElement, classAdd, classRemove) {
+//     let numberOfProducts = objetiveElement.length;
+//     console.log(objetiveElement)
+//     for(let i = 0; i <= numberOfProducts; i++) {
+//         console.log(objetiveElement[i].classList.item(1))
+//         if(objetiveElement[i].classList.item(1) === classRemove){
+
+//             objetiveElement[i].classList.remove(classRemove);
+//             objetiveElement[i].classList.add(classAdd);
+//         }
+//     }
+// }
+
 function replaceClass (objetiveElement, classAdd, classRemove) {
-    if ( objetiveElement.classList.item(1) === classRemove) {
+    if (objetiveElement.classList.item(1) === classRemove) {
         objetiveElement.classList.add(classAdd);
         objetiveElement.classList.remove(classRemove);
     } else {
         objetiveElement.classList.remove(classAdd);
         objetiveElement.classList.add(classRemove);
+    }
+};
+
+function replaceClassForClassName (objetiveElement, number1, number2, number3, number4, number5, number6, number7, number8, classAdd, classRemove) {
+    let numberOfProducts = objetiveElement.length;
+    for(let i = 0; i <= numberOfProducts; i++) {
+
+        if(i != number1 && i != number2 && i != number3 && i != number4 && i != number5 && i != number5 && i != number6 && i != number7 && i != number8){
+            if(objetiveElement[i].classList.item(1) === classRemove) {
+                objetiveElement[i].classList.remove(classRemove);
+                objetiveElement[i].classList.add(classAdd);
+            } else {
+                objetiveElement[i].classList.remove(classAdd);
+                objetiveElement[i].classList.add(classRemove);
+            }
+        }
     }
 };
 
@@ -15,9 +44,27 @@ const powerPerformance = document.getElementById("power-performance");
 const healthyDigestion = document.getElementById("healthy-digestion");
 
 const containerProductIndividual = document.getElementsByClassName("container__product_individual")
+
 nutritionForYou.addEventListener("click", () => {
-    containerProductIndividual[0]
+    replaceClassForClassName(containerProductIndividual, 19, 20, 22, 23, 24, 30, 31, null, "displayFlex", "displayNone");
+    replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
 });
+
+weightControl.addEventListener("click", () => {
+    replaceClassForClassName(containerProductIndividual, 7, 8, 15, 32, 33, 34, 35, null, "displayFlex", "displayNone");
+    replaceClass (weightControl, "btn-normal", "btn-pressed");
+});
+
+powerPerformance.addEventListener("click", () => {
+    replaceClassForClassName(containerProductIndividual, 3, 4, 5, 6, 10, 12, 27, 28, "displayFlex", "displayNone");
+    replaceClass (powerPerformance, "btn-normal", "btn-pressed");
+});
+
+healthyDigestion.addEventListener("click", () => {
+    replaceClassForClassName(containerProductIndividual, 0, 1, 2, 9, 11, 15, null, null, "displayFlex", "displayNone");
+    replaceClass (healthyDigestion, "btn-normal", "btn-pressed");
+});
+
 
 /* Main > List of products > container__product_individual > content_product > Product_details */
 const price = document.getElementsByClassName("product__price");
@@ -60,7 +107,7 @@ let prices = [
     1680,// THERMOGEN TEA LIMON SUPREME
     2500,// THERMOGEN TEA MARACUYA SUPREME
     4380 // UZO SUPREME
-]
+];
 
 let numberOfProducts = price.length; // 36
 

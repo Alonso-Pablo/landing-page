@@ -39,6 +39,7 @@ main {
         background-size: contain;
         cursor: pointer;
     }
+    
 
     /* Filters bar */
     .main__filters {
@@ -62,9 +63,10 @@ main {
             .main__filter {
                 display: flex;
                 height: 30px;
-                padding: 0 10px;
+                padding: 0 15px;
                 margin-right: 10px;
-                background-color: var(--white);
+                /* background-color: var(--white);
+                border: 1px solid var(--orange); */
                 border-radius: 100px;
                 justify-content: center;
                 align-items: center;
@@ -72,7 +74,9 @@ main {
                 font-size: 1.5rem;
                 font-weight: 700;
                 white-space: nowrap;
+                user-select: none;
             }
+
 
     /* List of products */
     .main_list_product {
@@ -86,11 +90,13 @@ main {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-color: var(--graylight);
         }
 
         .container__product_individual {
             width: 90%;
             margin: 15px 0;
+            border-radius: 10px 10px 10px 10px;
             background-color: var(--white);
             flex-direction: column;
             box-shadow: 10px 10px 20px -20px var(--black);
@@ -99,7 +105,7 @@ main {
                 display: flex;
                 width: 100%;
                 height: 30px;
-                border-radius: 5px 5px 0 0;
+                border-radius: 10px 10px 0 0;
                 background-color: var(--black);
                 color: var(--white);
                 font-size: 1.5rem;
@@ -111,7 +117,7 @@ main {
                 display: flex;
                 font-size: 1.4rem;
                 background-color: var(--white);
-                border-radius: 0 0 5px 5px;
+                border-radius: 0 0 10px 10px;
             }
                 .product--img {
                     display: flex;

@@ -28,3 +28,12 @@
     background-position: center;
     background-size: cover;
 }
+
+.btn-normal {
+    background-color: var(--white);
+    border: 2px solid var(--orange);
+}
+.btn-pressed {
+    background-color: var(--orange);
+    border: 2px solid var(--white);
+}
