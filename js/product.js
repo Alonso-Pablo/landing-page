@@ -45,6 +45,23 @@ const healthyDigestion = document.getElementById("healthy-digestion");
 
 const containerProductIndividual = document.getElementsByClassName("container__product_individual")
 
+function replaceClassForClassName (objetiveElement, number1, number2, number3, number4, number5, number6, number7, number8, classAdd, classRemove) {
+    let numberOfProducts = objetiveElement.length;
+    console.log(objetiveElement)
+    for(let i = 0; i <= numberOfProducts; i++) {
+
+        if(i != number1 && i != number2 && i != number3 && i != number4 && i != number5 && i != number5 && i != number6 && i != number7 && i != number8){
+            if(objetiveElement[i].classList.item(1) === classRemove) {
+                objetiveElement[i].classList.remove(classRemove);
+                objetiveElement[i].classList.add(classAdd);
+            } else {
+                objetiveElement[i].classList.remove(classAdd);
+                objetiveElement[i].classList.add(classRemove);
+            }
+        }
+    }
+};
+
 nutritionForYou.addEventListener("click", () => {
     replaceClassForClassName(containerProductIndividual, 19, 20, 22, 23, 24, 30, 31, null, "displayFlex", "displayNone");
     replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
