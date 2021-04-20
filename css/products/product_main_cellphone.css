@@ -2,6 +2,8 @@ html {
     font-family: 'Roboto', 'arial';
 }
 
+/* CELLPHONE */
+
 /* < MAIN /> */ 
 main {
     z-index: 800;
@@ -48,7 +50,11 @@ main {
         align-items: center;
         overflow-x: scroll;
     }
-        .main__filters__container {
+    @media only screen and (min-width: 740px) {
+        .main__filters { overflow-x: hidden;}
+        .main__filters_container { justify-content: center;}
+    }
+        .main__filters_container {
             display: flex;
             width: 90%;
             height: 30px;
@@ -83,12 +89,11 @@ main {
         }
 
         .container__product_individual {
-            display: flex;
             width: 90%;
             margin: 15px 0;
             background-color: var(--white);
             flex-direction: column;
-            box-shadow: 5px 5px 20px -10px var(--black);
+            box-shadow: 10px 10px 20px -20px var(--black);
         }
             .title_product {
                 display: flex;
@@ -104,8 +109,9 @@ main {
             }
             .content_product {
                 display: flex;
-                font-size: 1.2rem;
-                
+                font-size: 1.4rem;
+                background-color: var(--white);
+                border-radius: 0 0 5px 5px;
             }
                 .product--img {
                     display: flex;
@@ -113,300 +119,208 @@ main {
                     justify-content: center;
                     align-items: center;
                 }
-
-                    /* ALOE BETA 200ML */
-                    .product__image-aloe-beta-200 {
+                    .box-large {
+                        position: absolute;
+                        width: 110px;
+                        height: 110px;
+                    }
+                    @media only screen and (min-width: 500px) {
+                        .box-large {
+                            width: 150px;
+                            height: 150px;
+                        }
+                    }
+                    .box-small {
+                        position: absolute;
+                        width: 130px;
+                        height: 130px;
+                    }
+                    .bottle {
                         position: absolute;
                         width: 150px;
                         height: 150px;
+                    }
+
+                    /* ALOE BETA 200ML */
+                    .product__image-aloe-beta-200 {
                         background-image: url("../../assets/img/products/aloe_beta_200.png");
                     }
 
                     /* ALOE BETA LIMON */
                     .product__image-aloe-beta-l {
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
                         background-image: url("../../assets/img/products/aloe_beta_limon_bote_900.png");
                     }
                     /* ALOE BETA ANANA */
                     .product__image-aloe-beta-a {
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
                         background-image: url("../../assets/img/products/aloe_beta_anana_bote_900.png");
                     }
 
                     /* AQTUA */
                     .product__image-aqtua-s {
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
                         background-image: url("../../assets/img/products/aqtua_caja_s.png");
                     }
 
                     /* BIOCROS BOTELLA */
                     .product__image-biocros--bottle {
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
                         background-image: url("../../assets/img/products/biocros_bote.png");
                     }
 
                     /* BIOCROS CAJA */
                     .product__image-biocros--box {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/biocros_caja.png");
                     }
 
                     /* BIOCROS SUPREME */
                     .product__image-biocros--box-s {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/biocros_caja_s.png");
                     }
 
                     /* CAFEZZINO PLUS */
                     .product__image-cafezzino-plus {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
-                        margin-top: 15px;
-                        margin-left: 5px;
                         background-image: url("../../assets/img/products/cafezzino_caja_plus.png");
                     }
 
                     /* DOLCEVITA SUPREME */
                     .product__image-dolcevita {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/dolcevita_caja_s.png");
                     }
                     /* EGO FRUTAS X6 */
                     .product__image-egofruta {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/ego_frutas_lata.png");
                     }
 
                     /* EGO 10 */
                     .product__image-ego10 {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/ego_10.png");
                     }
                     
                     /* EGO HERBAL */
                     .product__image-ego-herbal {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/ego_herbal.png");
                     }
                     
                     /* EGO LIFE SUPREME */
                     .product__image-ego-life {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/ego_life_caja_s.png");
                     }
                     
                     /* ESTOP PLUS */
                     .product__image-estop-plus {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/estop_caja_plus.png");
                     }
                     
                     /* FEM PLUS */
                     .product__image-fem-plus {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/fem_caja_s.png");
                     }
 
                     /* FIBER SUPREME */
                     .product__image-fiber-s {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/fiber_caja_s.png");
                     }
 
                     /* FOCUS */
                     .product__image-focus-bottle {
-                        position: absolute;
-                        width: 150px;
-                        height: 150px;
                         background-image: url("../../assets/img/products/focus_bote.png");
                     }
 
                     /* FOCUS SUPREME */
                     .product__image-focus-box-s {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/focus_caja_s.png");
                     }
 
                     /* HOMO PLUS */
                     .product__image-homo-plus {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/homo_caja_plus.png");
                     }
 
                     /* OMNILIFE VKIDS */
                     .product__image-vkids {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/vkids.png");
                     }
                     
                     /* OMNILIFE SHAKE SUPREME */
                     .product__image-shake-s {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/shake_caja_s.png");
                     }
                     
                     /* OMNIOST SUPREME */
                     .product__image-omniost-s {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/omniost_caja_s.png");
                     }
                     
                     /* OMNIPLUS CAJA */
                     .product__image-omniplus--box {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/omniplus_caja.png");
                     }
                     
                     /* OMNIPLUS BOTELLA */
                     .product__image-omniplus--bottle {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/omniplus_bote.png");
                     }
                     
                     /* OMNIPLUS SUPREME */
                     .product__image-omniplus--box-s {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/omniplus_caja_s.png");
                     }
                     
                     /* OMNIVIU SUPREME */
                     .product__image-omniviu-s {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/omniviu_caja_s.png");
                     }
                     
                     /* ONE C MIX PLUS */
                     .product__image-onecmix-plus {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/one_c_mix_plus.png");
                     }
                     
                     /* POWER MAKER BOTELLA */
                     .product__image-power-maker-bottle {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/power_maker_bote.png");
                     }
                     
                     /* POWER MAKER SUPREME */
                     .product__image-power-maker-box-s {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/power_maker_caja_s.png");
                     }
                     
                     /* STARBIEN */
                     .product__image-starbien {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/starbien_caja.png");
                     }
                     
                     /* SUPER MIX CHOCOLATE */
                     .product__image-super-mix-chocolate {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/super-mix-chocolate.png");
                     }
                     
                     /* SUPER MIX SUPREME VAINILLA */
                     .product__image-super-mix-s {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/supermix_vainilla_caja_s.png");
                     }
                     
                     /* THERMOGEN COFFEE BOTELLA*/
                     .product__image-thermogen-coffee-bottle {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/thermogen_coffee_bote.png");
                     }
                     
                     /* THERMOGEN COFFEE CAJA*/
                     .product__image-thermogen-coffee-box {
-                        position: absolute;
-                        width: 110px;
-                        height: 110px;
                         background-image: url("../../assets/img/products/thermogen_coffee_caja.png");
                     }
                     
                     /* THERMOGEN TEA LIMON SUPREME */
                     .product__image-thermogen-limon {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/thermogen_limon_caja_s.png");
                     }
                     
                     /* THERMOGEN TEA MARACUYA SUPREME */
                     .product__image-thermogen-maracuya {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/thermogen_maracuya_caja_s.png");
                     }
                     
                     /* UZO SUPREME */
                     .product__image-uzo-s {
-                        position: absolute;
-                        width: 130px;
-                        height: 130px;
                         background-image: url("../../assets/img/products/uzo_caja_s.png");
                     }
                     
@@ -420,12 +334,33 @@ main {
                 .product_interesed-btn {
                     display: flex;
                     width: 100%;
-                    height: 20px;
+                    height: 30px;
                     margin-top: 10px;
                     border-radius: 10px;
+                    border: 1px solid var(--orange);
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                .product_interesed-btn p {
+                    width: 70%;
+                }
+                .product__buy-like {
+                    display: flex;
+                    width: 100%;
+                    height: 30px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    border: 1px solid var(--orange);
                     background-color: var(--orange);
                     justify-content: center;
                     align-items: center;
                     font-size: 1.2rem;
                     font-weight: 700;
+                    text-align: center;
+                }
+                .product__buy-like p {
+                    width: 80%;
                 }

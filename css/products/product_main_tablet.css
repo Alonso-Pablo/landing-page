@@ -1,0 +1,24 @@
+/* TABLET */
+.main__filter {
+    cursor: pointer;
+}
+.title_product { 
+    height: 40px;
+    font-size: 2rem;
+}
+.content_product {
+    font-size: 1.5rem;
+}
+
+.box-small {
+    width: 200px;
+    height: 200px;
+}
+.box-large {
+    width: 200px;
+    height: 200px;
+}
+.bottle {
+    width: 200px;
+    height: 200px;
+}

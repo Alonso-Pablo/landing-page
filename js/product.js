@@ -1,39 +1,25 @@
-// const listOfPrice = {
-//     aloe200: 181,
-//     aloe900: 925,
-//     aqtuaS: 3110,
-//     biocros: 1640,
-//     biocrosS: 1730,
-//     cafezzinoPlus: 1800,
-//     dolcevitaS: 2200,
-//     egoFruta: 1050,
-//     ego10: 155,
-//     egoHerbal: 155,
-//     egoLifeS: 1090,
-//     estopPlus: 3230,
-//     femPlus: 2110,
-//     fiberS: 2460,
-//     focus: 2160,
-//     focusS: 2180,
-//     homoPlus: 2110,
-//     omnilifeVkids: 2100,
-//     omnilifeShakeS: 2230,
-//     omniostS: 2300,
-//     omniplusBox: 2270,
-//     omniplusBottle: 2240,
-//     omniplusS: 2310,
-//     omniviuS: 2200,
-//     oneCMixPlus: 1680,
-//     powerMaker: 2810,
-//     powerMakerS: 2860,
-//     starbien: 1490,
-//     superMixCholocate: 2440,
-//     superMixS: 2700,
-//     thermogenCoffee: 1480,
-//     thermogenTeaLimonS: 1680,
-//     thermogenTeaMaracuyaS: 2500,
-//     uzoSupreme: 4380,
-// }
+function replaceClass (objetiveElement, classAdd, classRemove) {
+    if ( objetiveElement.classList.item(1) === classRemove) {
+        objetiveElement.classList.add(classAdd);
+        objetiveElement.classList.remove(classRemove);
+    } else {
+        objetiveElement.classList.remove(classAdd);
+        objetiveElement.classList.add(classRemove);
+    }
+};
+
+/* Main > main__filters__container */
+const nutritionForYou = document.getElementById("nutrition-for-you");
+const weightControl = document.getElementById("weight-control");
+const powerPerformance = document.getElementById("power-performance");
+const healthyDigestion = document.getElementById("healthy-digestion");
+
+const containerProductIndividual = document.getElementsByClassName("container__product_individual")
+nutritionForYou.addEventListener("click", () => {
+    containerProductIndividual[0]
+});
+
+/* Main > List of products > container__product_individual > content_product > Product_details */
 const price = document.getElementsByClassName("product__price");
 
 let prices = [
@@ -79,9 +65,8 @@ let prices = [
 let numberOfProducts = price.length; // 36
 
 if (price[0].innerText === "") {
-    console.log(`Hola hay ${numberOfProducts} productos en la pagina`);
     for (let i = 0; i < numberOfProducts; i++) {
-        console.log("hola" + i)
         price[i].innerText = `$ ${prices[i]}`;
     }
-}
+};
+
