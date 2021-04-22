@@ -55,6 +55,7 @@ main {
         flex-direction: column;
     }
         .section_img__container .image__individual {
+            justify-content: center;
             align-items: center;
         }
             .section_img__container .image__individual img{

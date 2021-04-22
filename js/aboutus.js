@@ -34,23 +34,48 @@ closeMenu.addEventListener("click", () => {
     mainMenu.classList.add("displayNone");
 });
 
+/* Arrows Buttons */
+const arrowLeft = document.getElementById("arrow_left");
+const arrowRight = document.getElementById("arrow_right")
 
-const indication1 = document.getElementById("indication_1");
-const indication2 = document.getElementById("indication_2");
-const indication3 = document.getElementById("indication_3");
-const indication4 = document.getElementById("indication_4");
-const indication5 = document.getElementById("indication_5");
-const indication6 = document.getElementById("indication_6");
-const indication7 = document.getElementById("indication_7");
-const indication8 = document.getElementById("indication_8");
-const indication9 = document.getElementById("indication_9");
-const indication10 = document.getElementById("indication_10");
-const indication11 = document.getElementById("indication_11");
-const indication12 = document.getElementById("indication_12");
-const indication13 = document.getElementById("indication_13");
-const indication14 = document.getElementById("indication_14");
-const indication15 = document.getElementById("indication_15");
-const indication16 = document.getElementById("indication_16");
-const indication17 = document.getElementById("indication_17");
-const indication18 = document.getElementById("indication_18");
+const indication = document.getElementsByClassName("indication");
 
+const imageIndividual = document.getElementsByClassName("image__individual")
+
+let indicationCount = indication.length; //18
+let ImageCount = imageIndividual.length; //3
+
+
+/* Next Image (clouser) */
+const addupImage = () => {
+    let imageCurrent = 0;
+    const imageRecount = (image) => {
+        if (image === 1){
+            imageCurrent += image;
+            console.log(imageCurrent);
+            imageIndividual[(imageCurrent - 1)].classList.remove("displayFlex");
+            imageIndividual[(imageCurrent - 1)].classList.add("displayNone");
+            imageIndividual[imageCurrent].classList.remove("displayNone");
+            imageIndividual[imageCurrent].classList.add("displayFlex");
+        } else {
+            imageCurrent += image;
+            console.log(imageCurrent);
+            imageIndividual[(imageCurrent + 1)].classList.remove("displayFlex");
+            imageIndividual[(imageCurrent + 1)].classList.add("displayNone");
+            imageIndividual[imageCurrent].classList.remove("displayNone");
+            imageIndividual[imageCurrent].classList.add("displayFlex");
+        }
+    }
+    return imageRecount;
+    
+};
+let nextImage = addupImage();
+
+
+arrowRight.addEventListener("click", () => {
+    nextImage(1);
+});
+
+arrowLeft.addEventListener("click",  () => {
+    nextImage(-1);
+})
