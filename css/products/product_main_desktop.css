@@ -1,0 +1,9 @@
+.list_product__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+.container__product_individual {
+max-width: 600px;
+margin: 15px 15px
+}

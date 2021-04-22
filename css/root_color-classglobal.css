@@ -12,7 +12,7 @@
     
 }
 
-
+/*  Displays  */
 .displayNone {
     display: none;
 }
@@ -22,6 +22,8 @@
 .displayFlex {
     display: flex;
 }
+
+/* Background-image url config */
 .img_product_config {
     display: inline-block;
     background-repeat: no-repeat;
@@ -29,11 +31,12 @@
     background-size: cover;
 }
 
+/* Buttons */
 .btn-normal {
     background-color: var(--white);
     border: 2px solid var(--orange);
 }
 .btn-pressed {
-    background-color: var(--orange);
-    border: 2px solid var(--white);
+    background-color: var(--gray);
+    border: 2px solid var(--orange);
 }

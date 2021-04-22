@@ -1,0 +1,94 @@
+html {
+    font-family: 'Roboto', 'arial';
+}
+
+/* CELLPHONE */
+
+/* < MAIN /> */ 
+main {
+    z-index: 800;
+}
+
+/* Arrows, images and indicators */
+.main__section_img {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--black);
+}
+    /* Arrows */
+    .section_img__arrows {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+    }
+        .arrows__container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+            .arrow_left {
+                width: 50px;
+                height: 50px;
+                background-image: url("../../assets/svg/arrow-up-gross.svg");
+                transform: rotate(270deg);
+                filter: opacity(25%);
+            }
+            .arrow_right {
+                width: 50px;
+                height: 50px;
+                background-image: url("../../assets/svg/arrow-up-gross.svg");
+                transform: rotate(90deg);
+                filter: opacity(25%);
+            }
+
+    /* Images */
+    .section_img__container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+        .section_img__container .image__individual {
+            align-items: center;
+        }
+            .section_img__container .image__individual img{
+                max-width: 100%;
+            }
+
+
+    /*  INDICATORS  */
+    .main__bar_indicators {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--orange);
+    }
+    .bar__indicators_container {
+        display:flex;
+        width: 90%;
+        height: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+        .indication {
+            width: 8px;
+            height: 8px;
+            border-radius: 100px;
+            background-color: var(--black);
+            border: 2px solid var(--black);
+        }
+            .active {
+                background-color: var(--orange);
+            }
+            .inactive {
+                background-color: var(--black);
+            }

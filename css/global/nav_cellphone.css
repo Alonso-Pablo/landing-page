@@ -152,6 +152,7 @@ nav {
             }
         .close-menu-icon {
             max-height: 23px;
+            padding-top: 10px;
             margin: 0 auto;
             cursor: pointer;
         }

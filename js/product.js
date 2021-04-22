@@ -1,16 +1,5 @@
-// function replaceDisplay (objetiveElement, classAdd, classRemove) {
-//     let numberOfProducts = objetiveElement.length;
-//     console.log(objetiveElement)
-//     for(let i = 0; i <= numberOfProducts; i++) {
-//         console.log(objetiveElement[i].classList.item(1))
-//         if(objetiveElement[i].classList.item(1) === classRemove){
 
-//             objetiveElement[i].classList.remove(classRemove);
-//             objetiveElement[i].classList.add(classAdd);
-//         }
-//     }
-// }
-
+/* Reemplaza una clase por otra de un elemento, y lo vuelve a hacer si se activa nuevamente, volviendo a como estaba antes  */
 function replaceClass (objetiveElement, classAdd, classRemove) {
     if (objetiveElement.classList.item(1) === classRemove) {
         objetiveElement.classList.add(classAdd);
@@ -21,11 +10,23 @@ function replaceClass (objetiveElement, classAdd, classRemove) {
     }
 };
 
-function replaceClassForClassName (objetiveElement, number1, number2, number3, number4, number5, number6, number7, number8, classAdd, classRemove) {
+/* Reemplaza una clase por otra de un elemento, no vuelve a reemplazar de nuevo a como estaba antes */
+function replaceDisplay (objetiveElement, classAdd, classRemove) {
     let numberOfProducts = objetiveElement.length;
-    for(let i = 0; i <= numberOfProducts; i++) {
+    for(let i = 0; i < numberOfProducts; i++) {
+        if(objetiveElement[i].classList.item(1) === classRemove){
+            objetiveElement[i].classList.remove(classRemove);
+            objetiveElement[i].classList.add(classAdd);
+        }
+    }
+}
 
-        if(i != number1 && i != number2 && i != number3 && i != number4 && i != number5 && i != number5 && i != number6 && i != number7 && i != number8){
+/* Reemplaza una clase por otra de un conjunto de elementos seleccionados por el numero del array */
+function replaceClassForClassName (objetiveElement, array, classAdd, classRemove) {
+    let numberOfProducts = objetiveElement.length;
+    for(let i = 0; i < numberOfProducts; i++) {
+
+        if(!array.includes(i)){
             if(objetiveElement[i].classList.item(1) === classRemove) {
                 objetiveElement[i].classList.remove(classRemove);
                 objetiveElement[i].classList.add(classAdd);
@@ -36,6 +37,24 @@ function replaceClassForClassName (objetiveElement, number1, number2, number3, n
         }
     }
 };
+
+/* Vuelve a los otros botones-filtros al color normal (depresionado) */
+function depressBtn (ObjetiveElement1, ObjetiveElement2, ObjetiveElement3) {
+    if (ObjetiveElement1.classList.item(1) === "btn-pressed") {
+        ObjetiveElement1.classList.remove("btn-pressed");
+        ObjetiveElement1.classList.add("btn-normal")
+    }
+    if (ObjetiveElement2.classList.item(1) === "btn-pressed") {
+        ObjetiveElement2.classList.remove("btn-pressed");
+        ObjetiveElement2.classList.add("btn-normal")
+    }
+    if (ObjetiveElement3.classList.item(1) === "btn-pressed") {
+        ObjetiveElement3.classList.remove("btn-pressed");
+        ObjetiveElement3.classList.add("btn-normal")
+    }
+}
+
+
 
 /* Main > main__filters__container */
 const nutritionForYou = document.getElementById("nutrition-for-you");
@@ -44,42 +63,100 @@ const powerPerformance = document.getElementById("power-performance");
 const healthyDigestion = document.getElementById("healthy-digestion");
 
 const containerProductIndividual = document.getElementsByClassName("container__product_individual")
+const tester = document.getElementById("tester");
 
-function replaceClassForClassName (objetiveElement, number1, number2, number3, number4, number5, number6, number7, number8, classAdd, classRemove) {
-    let numberOfProducts = objetiveElement.length;
-    console.log(objetiveElement)
-    for(let i = 0; i <= numberOfProducts; i++) {
-
-        if(i != number1 && i != number2 && i != number3 && i != number4 && i != number5 && i != number5 && i != number6 && i != number7 && i != number8){
-            if(objetiveElement[i].classList.item(1) === classRemove) {
-                objetiveElement[i].classList.remove(classRemove);
-                objetiveElement[i].classList.add(classAdd);
-            } else {
-                objetiveElement[i].classList.remove(classAdd);
-                objetiveElement[i].classList.add(classRemove);
-            }
-        }
-    }
-};
 
 nutritionForYou.addEventListener("click", () => {
-    replaceClassForClassName(containerProductIndividual, 19, 20, 22, 23, 24, 30, 31, null, "displayFlex", "displayNone");
-    replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
+    let numbersSelected = [19, 20, 22, 23, 24, 30, 31];
+
+    if (tester.classList[1] === "no-pressed") {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
+        replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
+
+        depressBtn (weightControl, powerPerformance, healthyDigestion);
+
+        tester.classList.remove("no-pressed");
+        tester.classList.add("pressed")
+    } else {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
+        tester.classList.remove("pressed");
+        tester.classList.add("no-pressed")
+        
+        depressBtn (weightControl, powerPerformance, healthyDigestion);
+    }
 });
 
 weightControl.addEventListener("click", () => {
-    replaceClassForClassName(containerProductIndividual, 7, 8, 15, 32, 33, 34, 35, null, "displayFlex", "displayNone");
-    replaceClass (weightControl, "btn-normal", "btn-pressed");
+    let numbersSelected = [7, 8, 15, 32, 33, 34, 35];
+
+    if (tester.classList[1] === "no-pressed") {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
+        replaceClass (weightControl, "btn-normal", "btn-pressed");
+
+        depressBtn (nutritionForYou, powerPerformance, healthyDigestion);
+
+        tester.classList.remove("no-pressed");
+        tester.classList.add("pressed")
+    } else {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClass (weightControl, "btn-normal", "btn-pressed");
+        tester.classList.remove("pressed");
+        tester.classList.add("no-pressed")
+
+        depressBtn (nutritionForYou, powerPerformance, healthyDigestion);
+    }
 });
 
 powerPerformance.addEventListener("click", () => {
-    replaceClassForClassName(containerProductIndividual, 3, 4, 5, 6, 10, 12, 27, 28, "displayFlex", "displayNone");
-    replaceClass (powerPerformance, "btn-normal", "btn-pressed");
+    let numbersSelected = [3, 4, 5, 6, 10, 12, 27, 28];
+
+    if (tester.classList[1] === "no-pressed") {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
+        replaceClass (powerPerformance, "btn-normal", "btn-pressed");
+
+        depressBtn (nutritionForYou, weightControl, healthyDigestion);
+
+        tester.classList.remove("no-pressed");
+        tester.classList.add("pressed")
+    } else {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClass (powerPerformance, "btn-normal", "btn-pressed");
+        tester.classList.remove("pressed");
+        tester.classList.add("no-pressed")
+                
+        depressBtn (nutritionForYou, weightControl, healthyDigestion);
+    }
 });
 
+
+
 healthyDigestion.addEventListener("click", () => {
-    replaceClassForClassName(containerProductIndividual, 0, 1, 2, 9, 11, 15, null, null, "displayFlex", "displayNone");
-    replaceClass (healthyDigestion, "btn-normal", "btn-pressed");
+    let numbersSelected = [0, 1, 2, 9, 11, 15];
+
+
+    if (tester.classList[1] === "no-pressed") {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
+        replaceClass (healthyDigestion, "btn-normal", "btn-pressed");
+
+        depressBtn (nutritionForYou, weightControl, powerPerformance);
+
+        tester.classList.remove("no-pressed");
+        tester.classList.add("pressed")
+                
+        depressBtn (nutritionForYou, powerPerformance, healthyDigestion);
+    } else {
+        replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClass (healthyDigestion, "btn-normal", "btn-pressed");
+        tester.classList.remove("pressed");
+        tester.classList.add("no-pressed");
+        
+        depressBtn (nutritionForYou, powerPerformance, weightControl);
+    }
 });
 
 
@@ -126,7 +203,7 @@ let prices = [
     4380 // UZO SUPREME
 ];
 
-let numberOfProducts = price.length; // 36
+let numberOfProducts = price.length; // 37
 
 if (price[0].innerText === "") {
     for (let i = 0; i < numberOfProducts; i++) {
