@@ -42,8 +42,9 @@ const indication = document.getElementsByClassName("indication");
 
 const imageIndividual = document.getElementsByClassName("image__individual")
 
-let indicationCount = indication.length; //18
-let ImageCount = imageIndividual.length; //3
+let indicationCount = indication.length; // 18
+let imageTotalCount = imageIndividual.length; // 4
+let imageTotalCountMinusOne = (imageIndividual.length - 1); // 3
 
 
 /* Next Image (clouser) */
@@ -52,18 +53,36 @@ const addupImage = () => {
     const imageRecount = (image) => {
         if (image === 1){
             imageCurrent += image;
-            console.log(imageCurrent);
-            imageIndividual[(imageCurrent - 1)].classList.remove("displayFlex");
-            imageIndividual[(imageCurrent - 1)].classList.add("displayNone");
-            imageIndividual[imageCurrent].classList.remove("displayNone");
-            imageIndividual[imageCurrent].classList.add("displayFlex");
+            if (imageCurrent === (imageTotalCount)) {
+                console.log(`${imageCurrent} supera el numero de imagenes totales`);
+                imageIndividual[(imageCurrent - 1)].classList.remove("displayFlex");
+                imageIndividual[(imageCurrent - 1)].classList.add("displayNone");
+                imageIndividual[0].classList.remove("displayNone");
+                imageIndividual[0].classList.add("displayFlex");
+                imageCurrent = 0;
+            } else {
+                console.log(imageCurrent);
+                imageIndividual[(imageCurrent - 1)].classList.remove("displayFlex");
+                imageIndividual[(imageCurrent - 1)].classList.add("displayNone");
+                imageIndividual[imageCurrent].classList.remove("displayNone");
+                imageIndividual[imageCurrent].classList.add("displayFlex");
+            }
         } else {
             imageCurrent += image;
-            console.log(imageCurrent);
-            imageIndividual[(imageCurrent + 1)].classList.remove("displayFlex");
-            imageIndividual[(imageCurrent + 1)].classList.add("displayNone");
-            imageIndividual[imageCurrent].classList.remove("displayNone");
-            imageIndividual[imageCurrent].classList.add("displayFlex");
+            if (imageCurrent === -1) {
+                console.log(`${imageCurrent} el numero de imagenes totales es negativo`);
+                imageIndividual[(imageCurrent + 1)].classList.remove("displayFlex");
+                imageIndividual[(imageCurrent + 1)].classList.add("displayNone");
+                imageIndividual[(imageTotalCount - 1)].classList.remove("displayNone");
+                imageIndividual[(imageTotalCount - 1)].classList.add("displayFlex");
+                imageCurrent = imageTotalCountMinusOne;
+            } else {
+                console.log(imageCurrent);
+                imageIndividual[(imageCurrent + 1)].classList.remove("displayFlex");
+                imageIndividual[(imageCurrent + 1)].classList.add("displayNone");
+                imageIndividual[imageCurrent].classList.remove("displayNone");
+                imageIndividual[imageCurrent].classList.add("displayFlex");
+            }
         }
     }
     return imageRecount;
