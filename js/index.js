@@ -9,20 +9,59 @@ function replaceClass (objetiveElement, classAdd, classRemove) {
     }
 };
 
+function openNewTab () {
+    if (inputCellphone.value != "" && inputCellphone.value != " ") { 
+        window.location.href = `products.html#${inputCellphone.value}`;      
+    } else if (inputTablet.value != "" && inputTablet.value != " ") {
+        window.location.href = `products.html#${inputTablet.value}`;
+    } else if (inputDesktop.value != "" && inputDesktop.value != " ") {
+        window.location.href = `products.html#${inputDesktop.value}`;
+    }
+}
+
 /* NAV */
+
 const searchMenu = document.getElementById("search");
 const mainMenu = document.getElementById("main-menu");
 
+const inputCellphone = document.getElementById("input-cellphone");
+const inputTablet = document.getElementById("input-tablet");
+const inputDesktop = document.getElementById("input-desktop");
+
     /* Buttons */
-const searchIcon = document.getElementById("search-icon");
+const searchIconCellphone = document.getElementById("search-icon-cellphone");
+const searchIconTablet = document.getElementById("search-icon-tablet");
+const searchIconDesktop = document.getElementById("search-icon-desktop");
+
 
 const menuIconDisplay = document.getElementById("menu-icon");
 const closeMenu = document.getElementById("close-menu-icon");
 
-    /* Functions */
-    
+    /* Event Listener */
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Enter"){
+        if (inputCellphone.value != "" && inputCellphone.value != " ") { 
+            window.location.href = `products.html#${inputCellphone.value}`;      
+        } else if (inputTablet.value != "" && inputTablet.value != " ") {
+            window.location.href = `products.html#${inputTablet.value}`;
+        } else if (inputDesktop.value != "" && inputDesktop.value != " ") {
+            window.location.href = `products.html#${inputDesktop.value}`;
+        }
+    };
+    },false);
+
+searchIconCellphone.addEventListener("click", () => {
+    openNewTab();
+});
+searchIconTablet.addEventListener("click", () => {
+    openNewTab();
+});
+searchIconDesktop.addEventListener("click", () => {
+    openNewTab();
+});
+
         /* Search Menu - Display or Hide */
-searchIcon.addEventListener("click", () => {
+searchIconCellphone.addEventListener("click", () => {
     replaceClass (searchMenu, "displayFlex", "displayHidden");
 });
 
@@ -38,9 +77,9 @@ closeMenu.addEventListener("click", () => {
 /* MAIN */
 const mainDisclaimer = document.getElementById("main__disclaimer");
 
-    /* Buttons */
 
-    /* Functions */
+    /* Event Listener */
+
         /* main > Disclaimer - Display or Hide */
 mainDisclaimer.addEventListener("click", () => replaceClass (mainDisclaimer, "displayFlex", "displayNone") );
 

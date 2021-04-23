@@ -13,7 +13,6 @@
     <link rel="icon" href="./assets/img/favicon.png">
 
     <!-- Preload-->
-    <link rel="preload" as="image" href="./assets/img/map_image.png" />
     <link rel="preload" as="style" href="css/normalize.css">
     <link rel="preload" as="style" href="css/root_color-classglobal.css">
     <link rel="preload" as="style" href="./css/global/nav_cellphone.css"/>
@@ -76,14 +75,14 @@
                 <div class="search displayHidden" id="search">
                     <div class="search__container ">
 
-                        <input class="search-input" type="text" placeholder="Buscar producto o nutriente">
+                        <input class="search-input" id="input-cellphone" type="text" placeholder="Buscar producto o nutriente">
 
                     </div>
                 </div>
 
                 <!-- Search Icon -->
                 <div class="nav__container-search">
-                    <div class="search-icon" id="search-icon">
+                    <div class="search-icon" id="search-icon-cellphone">
                         <img src="./assets/svg/search-icon-white.svg" alt="search icon">
                     </div>
 
@@ -105,9 +104,9 @@
                 <div class="search" id="search">
                     <div class="search__container">
 
-                        <input class="search-input" type="text" placeholder="Buscar producto o nutriente">
+                        <input class="search-input" id="input-tablet" type="text" placeholder="Buscar producto o nutriente">
 
-                        <div class="search-icon" id="search-icon">
+                        <div class="search-icon" id="search-icon-tablet">
                             <img src="./assets/svg/search-icon-white.svg" alt="search icon">
                         </div>
 
@@ -154,9 +153,9 @@
                 <div class="search" id="search">
                     <div class="search__container">
 
-                        <input class="search-input" type="text" placeholder="Buscar producto o nutriente">
+                        <input class="search-input" id="input-desktop" type="text" placeholder="Buscar producto o nutriente">
 
-                        <div class="search-icon" id="search-icon">
+                        <div class="search-icon" id="search-icon-desktop">
                             <img src="./assets/svg/search-icon-white.svg" alt="search icon">
                         </div>
 
@@ -206,30 +205,65 @@
                     <span class="product__image-omniplus img_product_config"></span>
                     <div class="product__background-orange"><h2>OMNIPLUS</h2></div>
                     <div class="product__background-black"><p>Multivitamínico</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#omniplus" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-powermaker img_product_config"></span>
                     <div class="product__background-orange"><h2>POWER MAKER</h2></div>
                     <div class="product__background-black"><p>Energía</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#powermaker" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-thermogenlimon img_product_config"></span>
                     <div class="product__background-orange"><h2>TH. LIMÓN</h2></div>
                     <div class="product__background-black"><p>Control de peso</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#thermogenicos" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-fibersupreme img_product_config"></span>
                     <div class="product__background-orange"><h2>FIBER SUPREME</h2></div>
                     <div class="product__background-black"><p>Fuente de fibras</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#fiber" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-biocros img_product_config"></span>
                     <div class="product__background-orange"><h2>BIOCROS</h2></div>
                     <div class="product__background-black"><p>Energía y Vitaminas B</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#biocros" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
@@ -237,18 +271,39 @@
                     <span class="product__image-aloe-beta-lemon img_product_config"></span>
                     <div class="product__background-orange"><h2>ALOE BETA</h2></div>
                     <div class="product__background-black"><p>Extracto de Aloe Vera</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#aloebeta" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-focus img_product_config"></span>
                     <div class="product__background-orange"><h2>FOCUS</h2></div>
                     <div class="product__background-black"><p>Colina, Glicina ...</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#focus" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="product__background-gray">
                     <span class="product__image-omniost img_product_config"></span>
                     <div class="product__background-orange"><h2>OMNIOST</h2></div>
                     <div class="product__background-black"><p>Calcio, Vitamina D ...</p></div>
+
+                    <div class="product__hover displayNone">
+                        <a href="products.html#omniost" class="product__moreinfo">
+                            <span class="plus-icon img_product_config"></span><p>Más información</p>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
@@ -265,7 +320,7 @@
                     <div class="product__background-orange"><h2>OMNIPLUS</h2></div>
                     <div class="product__background-black"><p>Multivitamínicos</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#omniplus" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Omniplus" target="_blank" class="product__sendwsp" rel="noreferrer">
@@ -283,7 +338,7 @@
                     <div class="product__background-orange"><h2>BIOCROS</h2></div>
                     <div class="product__background-black"><p>Energía y Rendimiento</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#biocros" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Biocros" target="_blank" class="product__sendwsp" rel="noreferrer">
@@ -300,7 +355,7 @@
                     <div class="product__background-orange"><h2>THERMOGÉNICOS</h2></div>
                     <div class="product__background-black"><p>Control de peso</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#thermogenicos" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20los%20Thermogenicos" target="_blank" class="product__sendwsp" rel="noreferrer">
@@ -315,10 +370,10 @@
                     <div class="product__background-orange"><h2>FIBER SUPREME</h2></div>
                     <div class="product__background-black"><p>Extractos de Fibras</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#fiber-supreme" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Omniplus" target="_blank" class="product__sendwsp" rel="noreferrer">
+                        <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Fiber%20Surpeme" target="_blank" class="product__sendwsp" rel="noreferrer">
                             <span class="plus-icon img_product_config"></span><p>Preguntar por este producto via Whatsapp</p>
                         </a>
                     </div>
@@ -336,7 +391,7 @@
                     <div class="product__background-orange"><h2>OMNIOST</h2></div>
                     <div class="product__background-black"><p>Calcio, Vitamina C y D</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#omniost" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Omniost" target="_blank" class="product__sendwsp" rel="noreferrer">
@@ -352,7 +407,7 @@
                     <div class="product__background-orange"><h2>POWER MAKER</h2></div>
                     <div class="product__background-black"><p>Proteina, Taurina y Arginina</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#powermaker" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Power%20Maker" target="_blank" class="product__sendwsp" rel="noreferrer">
@@ -368,10 +423,10 @@
                     <div class="product__background-orange"><h2>FOCUS</h2></div>
                     <div class="product__background-black"><p>Colina, Glicina, Taurina y Vitaminas</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#focus" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span><p>Más información</p>
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Omniplus" target="_blank" class="product__sendwsp" rel="noreferrer" rel="noreferrer">
+                        <a href="https://api.whatsapp.com/send?phone=5491133136799&text=Hola%20Zulma!%20Me%20interesa%20saber%20más%20sobre%20el%20Focus" target="_blank" class="product__sendwsp" rel="noreferrer" rel="noreferrer">
                             <span class="plus-icon img_product_config"></span><p>Preguntar por este producto via Whatsapp</p>
                         </a>
                     </div>
@@ -386,7 +441,7 @@
                     <div class="product__background-orange"><h2>ALOE BETA</h2></div>
                     <div class="product__background-black"><p>Extracto concentrado de Aloe Vera</p></div>
                     <div class="product__hover displayNone">
-                        <a href="#" class="product__moreinfo">
+                        <a href="products.html#aloebeta" class="product__moreinfo">
                             <span class="plus-icon img_product_config"></span>
                             <p>Más información</p>
                         </a>
