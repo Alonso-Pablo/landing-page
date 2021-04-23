@@ -1,4 +1,32 @@
-.section_img__container .image__individual img{
-    max-width: 100%;
-    max-height: 800px;
+    /* Arrows */
+.section_img__arrows {
+    height: 600px;
 }
+    .arrows__container {
+        height: 500px;
+    }
+        .left_container {
+            width: 100px;
+            height: 400px;
+        }
+            .left_container:hover {
+                background: linear-gradient(90deg, rgba(254, 153, 37, 0.281) 0%, rgba(0,0,0,0) 100%);
+            }
+        .right_container {
+            width: 100px;
+            height: 400px;
+        }
+            .right_container:hover {
+                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(254, 153, 37, 0.281) 100%);
+            }
+
+    /* Images */
+.section_img__container .image__individual {
+    min-height: 600px;
+    max-height: 600px;
+}
+    .section_img__container .image__individual img{
+        max-width: 100%;
+        max-height: 600px;
+    }
+
