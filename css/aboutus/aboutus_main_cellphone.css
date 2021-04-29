@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto', 'arial';
+    font-family: var(--font-principal);
 }
 
 /* CELLPHONE */

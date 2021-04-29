@@ -33,13 +33,14 @@ nav .nav__container-main-desktop {
         align-items: center;
         font-size: 1.8rem;
         font-weight: 700;
-        gap: 50px;
+        gap: 40px;
     }
         nav .nav__list a {
             display: flex;
             height: 50px;
             padding: 0 5px;
             align-items: center;
+            white-space: nowrap;
         }
         nav .nav__list a:hover {
 

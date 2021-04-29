@@ -1,0 +1,131 @@
+html {
+    font-family: var(--font-principal);
+}
+.main_select-country {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--graylight);
+}
+    .select-country__title {
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 30px;
+        padding: 15px 0;
+        border-radius: 10px 10px 0 0;
+        background-color: var(--white);
+    }
+    .country-container {
+        display: flex;
+        width: 90%;
+        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--white);
+    }
+
+            .country-individual {
+                display: flex;
+                width: 70%;
+                margin: 0 auto;
+                padding: 15px 10px;
+                border-bottom: 1px solid var(--graylight);
+            }
+                .country-flag {
+                    width: 50px;
+                    height: 50px;
+                }
+                .country-name {
+                    display: flex;
+                    text-align: start;
+                    align-items: center;
+                    font-size: 2rem;
+                    margin-left: 20px
+                }
+
+
+                .ar {
+                    background-image: url('../../assets/svg/country-flags/ar.svg');
+                }
+                .be {
+                    background-image: url('../../assets/svg/country-flags/be.svg');
+                }
+                .bo {
+                    background-image: url('../../assets/svg/country-flags/bo.svg');
+                }
+                .br {
+                    background-image: url('../../assets/svg/country-flags/br.svg');
+                }
+                .cl {
+                    background-image: url('../../assets/svg/country-flags/cl.svg');
+                }
+                .co {
+                    background-image: url('../../assets/svg/country-flags/co.svg');
+                }
+                .cr {
+                    background-image: url('../../assets/svg/country-flags/cr.svg');
+                }
+                .ec {
+                    background-image: url('../../assets/svg/country-flags/ec.svg');
+                }
+                .sv {
+                    background-image: url('../../assets/svg/country-flags/sv.svg');
+                }
+                .es {
+                    background-image: url('../../assets/svg/country-flags/es.svg');
+                }
+                .fr {
+                    background-image: url('../../assets/svg/country-flags/fr.svg');
+                }
+                .de {
+                    background-image: url('../../assets/svg/country-flags/de.svg');
+                }
+                .gt {
+                    background-image: url('../../assets/svg/country-flags/gt.svg');
+                }
+                .it {
+                    background-image: url('../../assets/svg/country-flags/it.svg');
+                }
+                .mx {
+                    background-image: url('../../assets/svg/country-flags/mx.svg');
+                }
+                .nl {
+                    background-image: url('../../assets/svg/country-flags/nl.svg');
+                }
+                .ni {
+                    background-image: url('../../assets/svg/country-flags/ni.svg');
+                }
+                .pa {
+                    background-image: url('../../assets/svg/country-flags/pa.svg');
+                }
+                .py {
+                    background-image: url('../../assets/svg/country-flags/py.svg');
+                }
+                .pe {
+                    background-image: url('../../assets/svg/country-flags/pe.svg');
+                }
+                .pt {
+                    background-image: url('../../assets/svg/country-flags/pt.svg');
+                }
+                .ie {
+                    background-image: url('../../assets/svg/country-flags/ie.svg');
+                }
+                .do {
+                    background-image: url('../../assets/svg/country-flags/do.svg');
+                }
+                .us {
+                    background-image: url('../../assets/svg/country-flags/us.svg');
+                }
+                .uy {
+                    background-image: url('../../assets/svg/country-flags/uy.svg');
+                }
+                .uk {
+                    background-image: url('../../assets/svg/country-flags/uk.svg');
+                }
+                .ru {
+                    background-image: url('../../assets/svg/country-flags/ru.svg');
+                }
