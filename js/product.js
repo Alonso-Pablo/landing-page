@@ -1,3 +1,70 @@
+function openNewTabfromInput () {
+    if (inputCellphone.value != "" && inputCellphone.value != " ") { 
+        window.location.href = `products.html#${inputCellphone.value}`;      
+    } else if (inputTablet.value != "" && inputTablet.value != " ") {
+        window.location.href = `products.html#${inputTablet.value}`;
+    } else if (inputDesktop.value != "" && inputDesktop.value != " ") {
+        window.location.href = `products.html#${inputDesktop.value}`;
+    }
+}
+
+/* NAV */
+
+const searchMenu = document.getElementById("search");
+const mainMenu = document.getElementById("main-menu");
+
+const inputCellphone = document.getElementById("input-cellphone");
+const inputTablet = document.getElementById("input-tablet");
+const inputDesktop = document.getElementById("input-desktop");
+
+    /* Buttons */
+const searchIconCellphone = document.getElementById("search-icon-cellphone");
+const searchIconTablet = document.getElementById("search-icon-tablet");
+const searchIconDesktop = document.getElementById("search-icon-desktop");
+
+
+const menuIconDisplay = document.getElementById("menu-icon");
+const closeMenu = document.getElementById("close-menu-icon");
+
+    /* Event Listener */
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Enter"){
+        if (inputCellphone.value != "" && inputCellphone.value != " ") { 
+            window.location.href = `products.html#${inputCellphone.value}`;
+            location.reload();      
+        } else if (inputTablet.value != "" && inputTablet.value != " ") {
+            window.location.href = `products.html#${inputTablet.value}`;
+            location.reload();
+        } else if (inputDesktop.value != "" && inputDesktop.value != " ") {
+            window.location.href = `products.html#${inputDesktop.value}`;
+            location.reload();
+        }
+    };
+    });
+
+searchIconCellphone.addEventListener("click", () => {
+    openNewTabfromInput();
+});
+searchIconTablet.addEventListener("click", () => {
+    openNewTabfromInput();
+});
+searchIconDesktop.addEventListener("click", () => {
+    openNewTabfromInput();
+});
+
+        /* Search Menu - Display or Hide */
+searchIconCellphone.addEventListener("click", () => {
+    replaceClass (searchMenu, "displayFlex", "displayHidden");
+});
+
+        /* Option menu - Display or Hide */
+menuIconDisplay.addEventListener("click", () => replaceClass (mainMenu, "displayFlex", "displayNone") );
+
+closeMenu.addEventListener("click", () => {
+    mainMenu.classList.remove("displayFlex");
+    mainMenu.classList.add("displayNone");
+});
+
 /* Main > List of products > container__product_individual > content_product > Product_details */
 const price = document.getElementsByClassName("product__price");
 
@@ -143,6 +210,7 @@ nutritionForYou.addEventListener("click", () => {
         tester.classList.add("pressed")
     } else {
         replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
         replaceClass (nutritionForYou, "btn-normal", "btn-pressed");
         tester.classList.remove("pressed");
         tester.classList.add("no-pressed")
@@ -165,6 +233,7 @@ weightControl.addEventListener("click", () => {
         tester.classList.add("pressed")
     } else {
         replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
         replaceClass (weightControl, "btn-normal", "btn-pressed");
         tester.classList.remove("pressed");
         tester.classList.add("no-pressed")
@@ -187,6 +256,7 @@ powerPerformance.addEventListener("click", () => {
         tester.classList.add("pressed")
     } else {
         replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
         replaceClass (powerPerformance, "btn-normal", "btn-pressed");
         tester.classList.remove("pressed");
         tester.classList.add("no-pressed")
@@ -212,6 +282,7 @@ healthyDigestion.addEventListener("click", () => {
         depressBtn (nutritionForYou, powerPerformance, healthyDigestion);
     } else {
         replaceDisplay(containerProductIndividual, "displayFlex", "displayNone");
+        replaceClassForClassName(containerProductIndividual, numbersSelected, "displayFlex", "displayNone");
         replaceClass (healthyDigestion, "btn-normal", "btn-pressed");
         tester.classList.remove("pressed");
         tester.classList.add("no-pressed");
@@ -221,11 +292,11 @@ healthyDigestion.addEventListener("click", () => {
 });
 
 
+
 let urlHash = window.location.hash.toLowerCase();
 
 urlHash = urlHash.replace(/^./, "");
 urlHash = urlHash.replace(/%20/g, "");
-console.log(urlHash)
 switch (urlHash) {
     case 'aloe':
     case 'aloevera':
@@ -832,33 +903,10 @@ switch (urlHash) {
         showTheChosen (containerProductIndividual, productChosen);
         break;
 
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-    case '':
-
+    case 'cafe':
+        productChosen = [7,32,33];
+        showTheChosen (containerProductIndividual, productChosen);
+        break;
 }
 //     case '':
 
