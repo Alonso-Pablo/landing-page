@@ -1,26 +1,67 @@
 html {
     font-family: var(--font-principal);
 }
+body {
+    background-color: var(--graylight);
+    width: 100%;
+}
+main {
+    padding-bottom: 80px;
+}
+.reg-as-an-entrepreneur {
+    width: 80%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+}
 .main_select-country {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--graylight);
 }
-    .select-country__title {
+    .select-country__h2 {
         width: 90%;
-        font-size: 2rem;
         text-align: center;
         margin-top: 30px;
         padding: 15px 0;
         border-radius: 10px 10px 0 0;
         background-color: var(--white);
     }
-    .country-container {
-        display: flex;
+        .select-country__h2 h2 {
+            font-size: 2.5rem;
+        }
+    .select-country {
         width: 90%;
+        margin-bottom: 30px;
+        justify-content: center;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--white);
+        cursor: pointer;
+    }
+        .select-individual {
+            width: 70%;
+            margin: 0 auto;
+            padding: 0 10px 15px 10px;
+            justify-content: center;
+            border-bottom: 1px solid var(--graylight);
+            font-size: 1.5rem;
+            align-items: center;
+        }
+            .plus {
+                min-width: 50px;
+                min-height: 50px;
+                background-image: url("../../assets/svg/country-flags/plus.svg")
+            }
+            .select-individual p {
+                margin-left: 20px;
+            }
+
+    .country-container {
+        width: 90%;
+        padding-bottom: 30px;
         margin-bottom: 30px;
         flex-direction: column;
         align-items: center;
@@ -28,104 +69,151 @@ html {
         background-color: var(--white);
     }
 
-            .country-individual {
-                display: flex;
-                width: 70%;
-                margin: 0 auto;
-                padding: 15px 10px;
-                border-bottom: 1px solid var(--graylight);
+        .country-individual {
+            width: 70%;
+            margin: 0 auto;
+            padding: 15px 10px;
+            border-bottom: 1px solid var(--graylight);
+            cursor: pointer;
+        }
+            .country-individual:hover {
+                background-color: var(--orange);
+                border-radius: 10px;
             }
-                .country-flag {
-                    width: 50px;
-                    height: 50px;
-                }
-                .country-name {
-                    display: flex;
-                    text-align: start;
-                    align-items: center;
-                    font-size: 2rem;
-                    margin-left: 20px
-                }
+            .country-flag {
+                width: 50px;
+                height: 50px;
+            }
+            .country-name {
+                display: flex;
+                text-align: start;
+                align-items: center;
+                font-size: 2rem;
+                margin-left: 20px;
+            }
 
 
-                .ar {
-                    background-image: url('../../assets/svg/country-flags/ar.svg');
-                }
-                .be {
-                    background-image: url('../../assets/svg/country-flags/be.svg');
-                }
-                .bo {
-                    background-image: url('../../assets/svg/country-flags/bo.svg');
-                }
-                .br {
-                    background-image: url('../../assets/svg/country-flags/br.svg');
-                }
-                .cl {
-                    background-image: url('../../assets/svg/country-flags/cl.svg');
-                }
-                .co {
-                    background-image: url('../../assets/svg/country-flags/co.svg');
-                }
-                .cr {
-                    background-image: url('../../assets/svg/country-flags/cr.svg');
-                }
-                .ec {
-                    background-image: url('../../assets/svg/country-flags/ec.svg');
-                }
-                .sv {
-                    background-image: url('../../assets/svg/country-flags/sv.svg');
-                }
-                .es {
-                    background-image: url('../../assets/svg/country-flags/es.svg');
-                }
-                .fr {
-                    background-image: url('../../assets/svg/country-flags/fr.svg');
-                }
-                .de {
-                    background-image: url('../../assets/svg/country-flags/de.svg');
-                }
-                .gt {
-                    background-image: url('../../assets/svg/country-flags/gt.svg');
-                }
-                .it {
-                    background-image: url('../../assets/svg/country-flags/it.svg');
-                }
-                .mx {
-                    background-image: url('../../assets/svg/country-flags/mx.svg');
-                }
-                .nl {
-                    background-image: url('../../assets/svg/country-flags/nl.svg');
-                }
-                .ni {
-                    background-image: url('../../assets/svg/country-flags/ni.svg');
-                }
-                .pa {
-                    background-image: url('../../assets/svg/country-flags/pa.svg');
-                }
-                .py {
-                    background-image: url('../../assets/svg/country-flags/py.svg');
-                }
-                .pe {
-                    background-image: url('../../assets/svg/country-flags/pe.svg');
-                }
-                .pt {
-                    background-image: url('../../assets/svg/country-flags/pt.svg');
-                }
-                .ie {
-                    background-image: url('../../assets/svg/country-flags/ie.svg');
-                }
-                .do {
-                    background-image: url('../../assets/svg/country-flags/do.svg');
-                }
-                .us {
-                    background-image: url('../../assets/svg/country-flags/us.svg');
-                }
-                .uy {
-                    background-image: url('../../assets/svg/country-flags/uy.svg');
-                }
-                .uk {
-                    background-image: url('../../assets/svg/country-flags/uk.svg');
-                }
-                .ru {
-                    background-image: url('../../assets/svg/country-flags/ru.svg');
-                }
+            .ar {
+                background-image: url('../../assets/svg/country-flags/ar.svg');
+            }
+            .be {
+                background-image: url('../../assets/svg/country-flags/be.svg');
+            }
+            .bo {
+                background-image: url('../../assets/svg/country-flags/bo.svg');
+            }
+            .br {
+                background-image: url('../../assets/svg/country-flags/br.svg');
+            }
+            .cl {
+                background-image: url('../../assets/svg/country-flags/cl.svg');
+            }
+            .co {
+                background-image: url('../../assets/svg/country-flags/co.svg');
+            }
+            .cr {
+                background-image: url('../../assets/svg/country-flags/cr.svg');
+            }
+            .ec {
+                background-image: url('../../assets/svg/country-flags/ec.svg');
+            }
+            .sv {
+                background-image: url('../../assets/svg/country-flags/sv.svg');
+            }
+            .es {
+                background-image: url('../../assets/svg/country-flags/es.svg');
+            }
+            .fr {
+                background-image: url('../../assets/svg/country-flags/fr.svg');
+            }
+            .de {
+                background-image: url('../../assets/svg/country-flags/de.svg');
+            }
+            .gt {
+                background-image: url('../../assets/svg/country-flags/gt.svg');
+            }
+            .it {
+                background-image: url('../../assets/svg/country-flags/it.svg');
+            }
+            .mx {
+                background-image: url('../../assets/svg/country-flags/mx.svg');
+            }
+            .nl {
+                background-image: url('../../assets/svg/country-flags/nl.svg');
+            }
+            .ni {
+                background-image: url('../../assets/svg/country-flags/ni.svg');
+            }
+            .pa {
+                background-image: url('../../assets/svg/country-flags/pa.svg');
+            }
+            .py {
+                background-image: url('../../assets/svg/country-flags/py.svg');
+            }
+            .pe {
+                background-image: url('../../assets/svg/country-flags/pe.svg');
+            }
+            .pt {
+                background-image: url('../../assets/svg/country-flags/pt.svg');
+            }
+            .ie {
+                background-image: url('../../assets/svg/country-flags/ie.svg');
+            }
+            .do {
+                background-image: url('../../assets/svg/country-flags/do.svg');
+            }
+            .us {
+                background-image: url('../../assets/svg/country-flags/us.svg');
+            }
+            .uy {
+                background-image: url('../../assets/svg/country-flags/uy.svg');
+            }
+            .uk {
+                background-image: url('../../assets/svg/country-flags/uk.svg');
+            }
+            .ru {
+                background-image: url('../../assets/svg/country-flags/ru.svg');
+            }
+
+.main__redirection {
+   width: 90%;
+   background-color: var(--white);
+   margin: 0 auto;
+   border-radius: 10px 10px 10px 10px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 30px
+}
+    .main__redirection > h2 {
+        width: 70%;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    .main__redirection > p {
+        width: 70%;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 1.5rem;
+    }
+    .main__redirection a {
+        display: flex;
+        width: 50%;
+        height: 50px;
+        margin: 30px 0;
+        background-color: var(--orange);
+        border-radius: 10px 10px 10px 10px;
+        justify-content: center;
+        align-items: center;
+    }
+        .main__redirection a p {
+            font-size: 2rem;
+        }
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

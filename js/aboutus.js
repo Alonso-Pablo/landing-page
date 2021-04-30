@@ -1,15 +1,15 @@
 
-function replaceClass (objetiveElement, classAdd, classRemove) {
-    if ( objetiveElement.classList.item(1) === classRemove) {
-        objetiveElement.classList.add(classAdd);
-        objetiveElement.classList.remove(classRemove);
+function replaceClass (objectiveElement, classAdd, classRemove) {
+    if ( objectiveElement.classList.item(1) === classRemove) {
+        objectiveElement.classList.add(classAdd);
+        objectiveElement.classList.remove(classRemove);
     } else {
-        objetiveElement.classList.remove(classAdd);
-        objetiveElement.classList.add(classRemove);
+        objectiveElement.classList.remove(classAdd);
+        objectiveElement.classList.add(classRemove);
     }
 };
 
-function openNewTab () {
+function openNewTabfromInput () {
     if (inputCellphone.value != "" && inputCellphone.value != " ") { 
         window.location.href = `products.html#${inputCellphone.value}`;      
     } else if (inputTablet.value != "" && inputTablet.value != " ") {
@@ -49,13 +49,13 @@ window.addEventListener("keydown", (event) => {
 },false);
 
 searchIconCellphone.addEventListener("click", () => {
-    openNewTab();
+    openNewTabfromInput();
 });
 searchIconTablet.addEventListener("click", () => {
-    openNewTab();
+    openNewTabfromInput();
 });
 searchIconDesktop.addEventListener("click", () => {
-    openNewTab();
+    openNewTabfromInput();
 });
 
         /* Search Menu - Display or Hide */

@@ -50,71 +50,71 @@ if (prices[0].innerText === "") {
 };
 
 /* Segun numeros de array se selecciona los elementos a mostras y los demas se ocultan */
-function showTheChosen (objetiveElement, array) {
-    let numberOfProducts = objetiveElement.length;
+function showTheChosen (objectiveElement, array) {
+    let numberOfProducts = objectiveElement.length;
     for (let i = 0; i < numberOfProducts; i++) {
         if (!array.includes(i)) {
-            objetiveElement[i].classList.remove("displayFlex");
-            objetiveElement[i].classList.add("displayNone");
+            objectiveElement[i].classList.remove("displayFlex");
+            objectiveElement[i].classList.add("displayNone");
         } else {
-            objetiveElement[i].classList.remove("displayNone");
-            objetiveElement[i].classList.add("displayFlex");
+            objectiveElement[i].classList.remove("displayNone");
+            objectiveElement[i].classList.add("displayFlex");
         }
     }
 };
 
 /* Reemplaza una clase por otra de un elemento, y lo vuelve a hacer si se activa nuevamente, volviendo a como estaba antes  */
-function replaceClass (objetiveElement, classAdd, classRemove) {
-    if (objetiveElement.classList.item(1) === classRemove) {
-        objetiveElement.classList.add(classAdd);
-        objetiveElement.classList.remove(classRemove);
+function replaceClass (objectiveElement, classAdd, classRemove) {
+    if (objectiveElement.classList.item(1) === classRemove) {
+        objectiveElement.classList.add(classAdd);
+        objectiveElement.classList.remove(classRemove);
     } else {
-        objetiveElement.classList.remove(classAdd);
-        objetiveElement.classList.add(classRemove);
+        objectiveElement.classList.remove(classAdd);
+        objectiveElement.classList.add(classRemove);
     }
 };
 
 /* Reemplaza una clase por otra de un elemento, no vuelve a reemplazar de nuevo a como estaba antes */
-function replaceDisplay (objetiveElement, classAdd, classRemove) {
-    let numberOfProducts = objetiveElement.length;
+function replaceDisplay (objectiveElement, classAdd, classRemove) {
+    let numberOfProducts = objectiveElement.length;
     for(let i = 0; i < numberOfProducts; i++) {
-        if(objetiveElement[i].classList.item(1) === classRemove){
-            objetiveElement[i].classList.remove(classRemove);
-            objetiveElement[i].classList.add(classAdd);
+        if(objectiveElement[i].classList.item(1) === classRemove){
+            objectiveElement[i].classList.remove(classRemove);
+            objectiveElement[i].classList.add(classAdd);
         }
     }
 }
 
 /* Reemplaza una clase por otra de un conjunto de elementos seleccionados por el numero del array */
-function replaceClassForClassName (objetiveElement, array, classAdd, classRemove) {
-    let numberOfProducts = objetiveElement.length;
+function replaceClassForClassName (objectiveElement, array, classAdd, classRemove) {
+    let numberOfProducts = objectiveElement.length;
     for (let i = 0; i < numberOfProducts; i++) {
 
         if(!array.includes(i)){
-            if (objetiveElement[i].classList.item(1) === classRemove) {
-                objetiveElement[i].classList.remove(classRemove);
-                objetiveElement[i].classList.add(classAdd);
+            if (objectiveElement[i].classList.item(1) === classRemove) {
+                objectiveElement[i].classList.remove(classRemove);
+                objectiveElement[i].classList.add(classAdd);
             } else {
-                objetiveElement[i].classList.remove(classAdd);
-                objetiveElement[i].classList.add(classRemove);
+                objectiveElement[i].classList.remove(classAdd);
+                objectiveElement[i].classList.add(classRemove);
             }
         }
     }
 };
 
 /* Vuelve a los otros botones-filtros al color normal (depresionado) */
-function depressBtn (ObjetiveElement1, ObjetiveElement2, ObjetiveElement3) {
-    if (ObjetiveElement1.classList.item(1) === "btn-pressed") {
-        ObjetiveElement1.classList.remove("btn-pressed");
-        ObjetiveElement1.classList.add("btn-normal")
+function depressBtn (objectiveElement1, objectiveElement2, objectiveElement3) {
+    if (objectiveElement1.classList.item(1) === "btn-pressed") {
+        objectiveElement1.classList.remove("btn-pressed");
+        objectiveElement1.classList.add("btn-normal")
     }
-    if (ObjetiveElement2.classList.item(1) === "btn-pressed") {
-        ObjetiveElement2.classList.remove("btn-pressed");
-        ObjetiveElement2.classList.add("btn-normal")
+    if (objectiveElement2.classList.item(1) === "btn-pressed") {
+        objectiveElement2.classList.remove("btn-pressed");
+        objectiveElement2.classList.add("btn-normal")
     }
-    if (ObjetiveElement3.classList.item(1) === "btn-pressed") {
-        ObjetiveElement3.classList.remove("btn-pressed");
-        ObjetiveElement3.classList.add("btn-normal")
+    if (objectiveElement3.classList.item(1) === "btn-pressed") {
+        objectiveElement3.classList.remove("btn-pressed");
+        objectiveElement3.classList.add("btn-normal")
     }
 }
 
