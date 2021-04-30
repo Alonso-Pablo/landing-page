@@ -3,7 +3,9 @@ html {
 }
 
 /* CELLPHONE */
-
+body {
+    background-color: var(--graylight);
+}
 /* < MAIN /> */ 
 main {
     z-index: 800;
@@ -370,3 +372,9 @@ main {
                 .product__buy-like p {
                     width: 80%;
                 }
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
