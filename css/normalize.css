@@ -13,35 +13,13 @@ html, body {
     /* 1 rem = 10 px */
 }
 
-ul {
+ul, figure, h1, p {
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 0;
 }
-figure {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-h1 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-
 
 /* Optional */
 input {
@@ -52,13 +30,12 @@ input:focus{
     outline: none
 }
 
-
 a {
     color: inherit;
 }
 a:link {
     text-decoration: none;
- }
+}
 
 
 button {
